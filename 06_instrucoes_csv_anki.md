@@ -2,6 +2,49 @@
 
 Use estas instruções para gerar o CSV de cards Anki ao final de cada matéria nova.
 
+## ⚠️ AVISO CRÍTICO: escaping e campos vazios
+
+O separador é **ponto e vírgula (`;`)**. Isso significa que **qualquer `;` ou `,` dentro de um campo quebra o CSV** se não estiver entre aspas.
+
+### Quando ASPAS são obrigatórias
+
+Aspas duplas (`"`) são obrigatórias se o campo contiver:
+- **ponto e vírgula** (`;`)
+- **vírgula** (`,`)
+- **aspas duplas** (`"`) → escape como `""` (duas aspas)
+
+**Exemplo de campo que PRECISA de aspas:**
+```csv
+"Pictograma: pessoa de braços abertos, gesto de ""era deste tamanho"""
+```
+A vírgula depois de "abertos" e as aspas internas exigem aspas externas. No CSV, aspas internas viram duas aspas (`""`).
+
+**Exemplo de campo que NÃO precisa de aspas:**
+```
+água
+```
+Sem vírgula nem ponto-e-vírgula, sem aspas.
+
+### Campos que podem ficar vazios
+
+| Campo | Quando pode estar vazio |
+|-------|------------------------|
+| **Hanzi** | NUNCA |
+| **Pinyin** | NUNCA |
+| **Significado** | NUNCA |
+| **Decomposicao** | NUNCA (pode ser breve, mas sempre preencha) |
+| **Exemplos** | ✅ SEMPRE vazio para cards do tipo `word` |
+| **Tipo** | NUNCA |
+| **Materia** | NUNCA |
+| **YouGlish** | NUNCA |
+| **Notas** | ✅ Pode estar vazio para qualquer tipo |
+
+Um campo vazio aparece como `;;` (dois delimitadores seguidos) ou `;` no final da linha. **Isso é correto.** O erro é quando uma linha tem **mais ou menos de 9 campos** — isso indica escaping quebrado.
+
+### Como detectar erro de escaping
+
+Se você validar o CSV e uma linha tiver **10 campos** em vez de 9, é porque um ponto-e-vírgula dentro de um campo não foi escapado com aspas. Corrija envolvendo o campo inteiro em `"..."`.
+
 ## Formato
 
 - **Separador:** ponto e vírgula (`;`)
@@ -40,8 +83,6 @@ Total típico por matéria: **6-8 cards** (3 caracteres + 3-5 palavras).
 **Exemplos:** só para cards do tipo `character`/`radical`. Para cards do tipo `word`, deixe vazio. Formato: `水果 (shuǐguǒ) — fruta; 喝水 (hē shuǐ) — beber água`.
 
 **Notas:** use para coisas que não cabem nos outros campos: tom + descrição, distinções (`Diferente de 江 que é rio do sul`), classifier, registro. Pode ficar vazio. Para cards do tipo `word`, normalmente fica vazio.
-
-**Cuidado com `;` dentro de campos.** Se um campo contiver ponto e vírgula no conteúdo, envolva o campo em aspas duplas: `"campo; com ponto e vírgula"`.
 
 ## Exemplo (matéria #NNN — água)
 
