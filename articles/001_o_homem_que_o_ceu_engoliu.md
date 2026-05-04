@@ -75,23 +75,21 @@ O Confucionismo levou essa lógica à arquitetura do Estado. O Taoismo, à arqui
 
 ## Para o Anki
 
-**Cards de caractere:**
-- Frente: 人 | Verso: rén — pessoa, ser humano (pictograma de perfil, duas pernas; radical ⺅ quando à esquerda)
-- Frente: 大 | Verso: dà — grande (pessoa de braços abertos = grande; também radical)
-- Frente: 天 | Verso: tiān — céu, dia, divino (traço horizontal sobre 大 = o que está acima)
+Cards desta matéria (9 cards):
 
-**Cards de radical:**
-- Frente: ⺅ | Verso: forma variante de 人 quando à esquerda — "radical da pessoa", indica relação com gente (ex: 你, 休)
+- 人 (rén) — character
+- 大 (dà) — character
+- 天 (tiān) — character
+- ⺅ (⺅) — radical
+- 大人 (dàrén) — word
+- 人口 (rénkǒu) — word
+- 大学 (dàxué) — word
+- 大家 (dàjiā) — word
+- 今天 (jīntiān) — word
 
-**Cards de palavra:**
-- Frente: 大人 | Verso: dàrén — adulto (lit. "pessoa grande")
-- Frente: 人口 | Verso: rénkǒu — população (lit. "pessoas-bocas")
-- Frente: 今天 | Verso: jīntiān — hoje (lit. "este dia")
-- Frente: 大学 | Verso: dàxué — universidade (lit. "grande estudo")
-- Frente: 大家 | Verso: dàjiā — todo mundo (lit. "grande família")
+[Baixar cards da matéria #001 (CSV)](../cards/001-o-homem-que-o-ceu-engoliu.csv)
 
-**Card opcional (frase/conceito):**
-- Frente: [天下](https://youglish.com/pronounce/天下/chinese) | Verso: tiānxià — "tudo sob o céu" → o mundo, ordem mundial chinesa (conceito; não é necessário memorizar agora)
+> Instale o note type com o [template](../hanzi-reader-template.apkg) antes de importar o CSV no Anki (File → Import).
 
 ---
 

@@ -16,11 +16,18 @@ Sempre que for iniciar uma sessão ou quando o usuário pedir a criação de um 
 
 ## Quando o usuário pedir a criação de um artigo
 
+O processo é **two-pass**:
+
 1. Leia também `05_formato_materias.md` — este é o **documento central de formatação** das matérias. Siga-o rigorosamente.
 2. Verifique `memory.md` para evitar repetir caracteres e variar o tipo de matéria.
-3. Escreva a matéria em português do Brasil, com os 3 caracteres do dia, seguindo a estrutura definida em `05_formato_materias.md`.
-4. Salve o arquivo na pasta `articles/` com o formato de nome: `NNN_titulo_curto.md`, onde `NNN` é o número sequencial da matéria.
-5. Atualize `memory.md` com os dados da nova matéria.
+3. **Primeira passada:** escreva a matéria completa (corpo + seção "Para o Anki" com placeholder indicando que o CSV virá depois).
+4. **Segunda passada:** com base no vocabulário da matéria, escolha os cards e gere o CSV em `site/cards/NNN-tema.csv` seguindo rigorosamente `06_instrucoes_csv_anki.md`.
+5. Volte à matéria e reescreva a seção "Para o Anki" com:
+   - Lista resumida dos cards (hanzi, pinyin, tipo — uma linha por card);
+   - Link para baixar o CSV;
+   - Instrução curta sobre como importar.
+6. Salve o arquivo na pasta `articles/` com o formato de nome: `NNN_titulo_curto.md`, onde `NNN` é o número sequencial da matéria.
+7. Atualize `memory.md` com os dados da nova matéria.
 
 ## Após criar ou modificar qualquer artigo
 
@@ -54,7 +61,9 @@ git push -u origin main
 
 1. Leia `00` a `04` para contexto.
 2. Leia `05` para formatação ao criar artigos.
-3. Escreva a matéria em `articles/NNN_titulo_curto.md`.
-4. Atualize `memory.md`.
-5. Rode `python3 build.py`.
-6. Commit e push.
+3. Escreva a matéria em `articles/NNN_titulo_curto.md` (incluindo placeholder no Anki).
+4. Gere o CSV em `site/cards/NNN-tema.csv`.
+5. Reescreva a seção "Para o Anki" na matéria.
+6. Atualize `memory.md`.
+7. Rode `python3 build.py`.
+8. Commit e push.

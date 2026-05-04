@@ -81,27 +81,20 @@ O termo [门神](https://youglish.com/pronounce/门神/chinese) tem também uma 
 
 ## Para o Anki
 
-**Cards de caractere:**
-- Frente: [门](https://youglish.com/pronounce/门/chinese) | Verso: mén — porta, portão. Pictograma de duas folhas. Radical Kangxi 169.
-- Frente: [们](https://youglish.com/pronounce/们/chinese) | Verso: men — sufixo de plural para pessoas. 亻(人) + 门 (fonético). Tom neutro.
-- Frente: [问](https://youglish.com/pronounce/问/chinese) | Verso: wèn — perguntar. 门 (fonético) + 口 (boca). Tom 4.
+Cards desta matéria (8 cards):
 
-**Cards de radical:**
-- Frente: 门 | Verso: radical "porta" (Kangxi 169). Aparece em 间, 闭, 闻, 闹, 们, 问.
+- 门 (mén) — character
+- 们 (men) — character
+- 问 (wèn) — character
+- 口 (kǒu) — radical
+- 我们 (wǒmen) — word
+- 大门 (dàmén) — word
+- 门口 (ménkǒu) — word
+- 问题 (wèntí) — word
 
-**Cards de palavra:**
-- Frente: [我们](https://youglish.com/pronounce/我们/chinese) | Verso: wǒmen — nós
-- Frente: [你们](https://youglish.com/pronounce/你们/chinese) | Verso: nǐmen — vocês
-- Frente: [他们](https://youglish.com/pronounce/他们/chinese) | Verso: tāmen — eles/elas
-- Frente: [大门](https://youglish.com/pronounce/大门/chinese) | Verso: dàmén — portão principal
-- Frente: [门口](https://youglish.com/pronounce/门口/chinese) | Verso: ménkǒu — entrada, soleira
-- Frente: [开门](https://youglish.com/pronounce/开门/chinese) | Verso: kāimén — abrir a porta
-- Frente: [问题](https://youglish.com/pronounce/问题/chinese) | Verso: wèntí — pergunta, problema
-- Frente: [请问](https://youglish.com/pronounce/请问/chinese) | Verso: qǐngwèn — por favor, posso perguntar?
-- Frente: [学问](https://youglish.com/pronounce/学问/chinese) | Verso: xuéwèn — conhecimento, erudição
+[Baixar cards da matéria #002 (CSV)](../cards/002-a-porta-que-pergunta.csv)
 
-**Card opcional de frase:**
-- Frente: 学问是问出来的 | Verso: xuéwèn shì wèn chūlái de — "Erudição vem de perguntar."
+> Instale o note type com o [template](../hanzi-reader-template.apkg) antes de importar o CSV no Anki (File → Import).
 
 ---
 

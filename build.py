@@ -12,6 +12,8 @@ from html import escape
 ROOT = Path(__file__).parent
 ARTICLES_DIR = ROOT / "articles"
 OUTPUT_DIR = ROOT / "site"
+ARTICLES_OUTPUT_DIR = OUTPUT_DIR / "articles"
+CARDS_OUTPUT_DIR = OUTPUT_DIR / "cards"
 
 # Configurações do Markdown
 md = markdown.Markdown(extensions=["extra", "toc", "tables", "fenced_code"])
@@ -405,6 +407,65 @@ img {
 .toc a:hover {
   color: var(--accent);
 }
+
+/* Seção de setup do Anki no index */
+.anki-setup {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.anki-setup h2 {
+  margin-top: 0;
+  border-bottom: none;
+  font-size: 1.2rem;
+}
+
+.anki-setup p {
+  margin-bottom: 0.75rem;
+}
+
+.anki-setup p:last-child {
+  margin-bottom: 0;
+}
+
+.anki-setup .download-link {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: var(--radius);
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.anki-setup .download-link:hover {
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
+.anki-setup .hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* Aviso de CSV ausente */
+.csv-warning {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--surface);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-top: 1rem;
+}
 """.strip()
 
 HTML_TEMPLATE = """<!DOCTYPE html>
@@ -494,6 +555,8 @@ def wrap_cjk(html: str) -> str:
 
 def build():
     OUTPUT_DIR.mkdir(exist_ok=True)
+    ARTICLES_OUTPUT_DIR.mkdir(exist_ok=True)
+    CARDS_OUTPUT_DIR.mkdir(exist_ok=True)
 
     full_css = f""":root {{
   /* Paleta quente-editorial: evoca papel artesanal e selo de tinta */
@@ -531,6 +594,8 @@ def build():
 {CSS_CORE}"""
 
     articles = []
+    csv_warnings = []
+
     for path in sorted(ARTICLES_DIR.glob("*.md")):
         raw = path.read_text(encoding="utf-8")
         title, meta_html, body = extract_title_and_meta(raw)
@@ -547,8 +612,14 @@ def build():
         m = re.match(r"^(\d+)", path.stem)
         num = int(m.group(1)) if m else 999
 
+        # Verifica se existe CSV correspondente (warning soft)
+        expected_csv = CARDS_OUTPUT_DIR / f"{num:03d}-*.csv"
+        csv_matches = list(CARDS_OUTPUT_DIR.glob(f"{num:03d}-*.csv"))
+        if not csv_matches:
+            csv_warnings.append(f"Matéria #{num:03d} ({path.stem}): CSV não encontrado em site/cards/")
+
         # Gera página individual
-        header = f'<nav class="site-header"><a href="index.html">← Índice</a><span>Matéria #{num:03d}</span></nav>'
+        header = f'<nav class="site-header"><a href="../index.html">← Índice</a><span>Matéria #{num:03d}</span></nav>'
         meta_block = f'<p class="meta"><em>{meta_html}</em></p>' if meta_html else ""
         footer = '<footer class="site-footer">Gerado para leitura offline</footer>'
 
@@ -562,9 +633,9 @@ def build():
             footer=footer,
         )
 
-        out_path = OUTPUT_DIR / f"{path.stem}.html"
+        out_path = ARTICLES_OUTPUT_DIR / f"{path.stem}.html"
         out_path.write_text(article_html, encoding="utf-8")
-        articles.append((num, title, meta_html, f"{path.stem}.html"))
+        articles.append((num, title, meta_html, f"articles/{path.stem}.html"))
 
     # Gera índice
     list_items = ""
@@ -576,6 +647,20 @@ def build():
         index_content = '<p class="meta" style="margin-top:2rem;text-align:center;">Nenhuma matéria ainda. Adicione arquivos .md em <code>articles/</code>.</p>'
     else:
         index_content = f'<ul class="article-list">\n{list_items}</ul>'
+
+    anki_section = """<section class="anki-setup">
+  <h2>Setup do Anki</h2>
+  <p>Antes de importar os cards, instale o note type:</p>
+  <p><a href="hanzi-reader-template.apkg" class="download-link">Baixar hanzi-reader-template.apkg</a></p>
+  <p class="hint">Abra o arquivo no Anki para instalar o note type. Depois, importe os CSVs de cada matéria (File → Import) selecionando o note type "Hanzi Reader".</p>
+</section>"""
+
+    index_content += f"\n{anki_section}"
+
+    if csv_warnings:
+        warnings_html = '<div class="csv-warning">\n<strong>Aviso:</strong> algumas matérias não têm CSV correspondente em <code>site/cards/</code>:<br>\n' + "<br>\n".join(escape(w) for w in csv_warnings) + "\n</div>"
+        index_content += f"\n{warnings_html}"
+
     index_desc = f"Coleção de {len(articles)} matéria(s) sobre hanzi, cultura chinesa e linguística. Leitura offline otimizada para mobile."
     index_html = HTML_TEMPLATE.format(
         title="Matérias de Hanzi",
@@ -588,6 +673,10 @@ def build():
     (OUTPUT_DIR / "index.html").write_text(index_html, encoding="utf-8")
 
     print(f"Gerado site em {OUTPUT_DIR}/ com {len(articles)} artigo(s).")
+    if csv_warnings:
+        print("Warnings:")
+        for w in csv_warnings:
+            print(f"  - {w}")
 
 
 if __name__ == "__main__":

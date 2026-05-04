@@ -431,12 +431,71 @@ img {
 .toc a:hover {
   color: var(--accent);
 }
+
+/* Seção de setup do Anki no index */
+.anki-setup {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.anki-setup h2 {
+  margin-top: 0;
+  border-bottom: none;
+  font-size: 1.2rem;
+}
+
+.anki-setup p {
+  margin-bottom: 0.75rem;
+}
+
+.anki-setup p:last-child {
+  margin-bottom: 0;
+}
+
+.anki-setup .download-link {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: var(--radius);
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.anki-setup .download-link:hover {
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
+.anki-setup .hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* Aviso de CSV ausente */
+.csv-warning {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--surface);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-top: 1rem;
+}
 </style>
 </head>
 <body>
 <a href="#conteudo" class="skip-link">Pular para conteúdo</a>
 <div class="page">
-<nav class="site-header"><a href="index.html">← Índice</a><span>Matéria #002</span></nav>
+<nav class="site-header"><a href="../index.html">← Índice</a><span>Matéria #002</span></nav>
 <main id="conteudo">
 <article>
 <h1>A porta que pergunta</h1>
@@ -486,24 +545,21 @@ img {
 <p>A prática é instrutiva. Na arquitetura conceitual chinesa, a porta não é neutra. É um filtro. Os deuses estão ali para deixar o bom entrar e barrar o mau. A porta não apenas separa — seleciona.</p>
 <p>O termo <a href="https://youglish.com/pronounce/门神/chinese"><span lang="zh">门神</span></a> tem também uma acepção coloquial moderna: goleiro de futebol. O guardião da meta, aquele que fecha a porta. A língua não descarta metáforas antigas. Só as recalibra.</p>
 <h2 id="para-o-anki">Para o Anki</h2>
-<p><strong>Cards de caractere:</strong>
-- Frente: <a href="https://youglish.com/pronounce/门/chinese"><span lang="zh">门</span></a> | Verso: mén — porta, portão. Pictograma de duas folhas. Radical Kangxi 169.
-- Frente: <a href="https://youglish.com/pronounce/们/chinese"><span lang="zh">们</span></a> | Verso: men — sufixo de plural para pessoas. <span lang="zh">亻</span>(<span lang="zh">人</span>) + <span lang="zh">门</span> (fonético). Tom neutro.
-- Frente: <a href="https://youglish.com/pronounce/问/chinese"><span lang="zh">问</span></a> | Verso: wèn — perguntar. <span lang="zh">门</span> (fonético) + <span lang="zh">口</span> (boca). Tom 4.</p>
-<p><strong>Cards de radical:</strong>
-- Frente: <span lang="zh">门</span> | Verso: radical "porta" (Kangxi 169). Aparece em <span lang="zh">间</span>, <span lang="zh">闭</span>, <span lang="zh">闻</span>, <span lang="zh">闹</span>, <span lang="zh">们</span>, <span lang="zh">问</span>.</p>
-<p><strong>Cards de palavra:</strong>
-- Frente: <a href="https://youglish.com/pronounce/我们/chinese"><span lang="zh">我们</span></a> | Verso: wǒmen — nós
-- Frente: <a href="https://youglish.com/pronounce/你们/chinese"><span lang="zh">你们</span></a> | Verso: nǐmen — vocês
-- Frente: <a href="https://youglish.com/pronounce/他们/chinese"><span lang="zh">他们</span></a> | Verso: tāmen — eles/elas
-- Frente: <a href="https://youglish.com/pronounce/大门/chinese"><span lang="zh">大门</span></a> | Verso: dàmén — portão principal
-- Frente: <a href="https://youglish.com/pronounce/门口/chinese"><span lang="zh">门口</span></a> | Verso: ménkǒu — entrada, soleira
-- Frente: <a href="https://youglish.com/pronounce/开门/chinese"><span lang="zh">开门</span></a> | Verso: kāimén — abrir a porta
-- Frente: <a href="https://youglish.com/pronounce/问题/chinese"><span lang="zh">问题</span></a> | Verso: wèntí — pergunta, problema
-- Frente: <a href="https://youglish.com/pronounce/请问/chinese"><span lang="zh">请问</span></a> | Verso: qǐngwèn — por favor, posso perguntar?
-- Frente: <a href="https://youglish.com/pronounce/学问/chinese"><span lang="zh">学问</span></a> | Verso: xuéwèn — conhecimento, erudição</p>
-<p><strong>Card opcional de frase:</strong>
-- Frente: <span lang="zh">学问是问出来的</span> | Verso: xuéwèn shì wèn chūlái de — "Erudição vem de perguntar."</p>
+<p>Cards desta matéria (8 cards):</p>
+<ul>
+<li><span lang="zh">门</span> (mén) — character</li>
+<li><span lang="zh">们</span> (men) — character</li>
+<li><span lang="zh">问</span> (wèn) — character</li>
+<li><span lang="zh">口</span> (kǒu) — radical</li>
+<li><span lang="zh">我们</span> (wǒmen) — word</li>
+<li><span lang="zh">大门</span> (dàmén) — word</li>
+<li><span lang="zh">门口</span> (ménkǒu) — word</li>
+<li><span lang="zh">问题</span> (wèntí) — word</li>
+</ul>
+<p><a href="../cards/002-a-porta-que-pergunta.csv">Baixar cards da matéria #002 (CSV)</a></p>
+<blockquote>
+<p>Instale o note type com o <a href="../hanzi-reader-template.apkg">template</a> antes de importar o CSV no Anki (File → Import).</p>
+</blockquote>
 <hr />
 <p>A matéria #001 terminou no céu. Esta termina no umbral. A terceira cruza a porta.</p></article>
 </main>

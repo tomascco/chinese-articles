@@ -21,6 +21,7 @@ Leitor único: Tomás. Engenheiro de software brasileiro, ~1h/dia de estudo, ~10
   - Na seção "Para o Anki", linkar todos os caracteres e palavras listados.
   - **Nunca** usar pinyin no link. Sempre o hanzi.
   - Coloque as matérias na pasta `articles`, com nome do arquivo sendo `n_titulo_curto` em que `n` é o número da matéria.
+  - Sempre leia o final da matéria anterior para saber o tema da próxima
 
 ## Tipos de matéria (rotação)
 
@@ -108,15 +109,34 @@ A deriva pode (e deve) ser tangencial. Se a matéria é sobre água e a deriva �
 
 **Uma deriva por matéria.** Não invente uma "deriva 1, deriva 2". Se quiser falar de duas coisas, escolhe uma e deixa a outra pra outra matéria.
 
-### 6. Para o Anki (~100-150 palavras)
+### 6. Para o Anki (~80-120 palavras)
 
-Subseção `## Para o Anki`. Aqui sim vira lista. Sugestões de cards a criar.
+Subseção `## Para o Anki`. Agora mais enxuta — o conteúdo detalhado dos cards vai no CSV.
 
 Estrutura:
-- **Cards de caractere:** 1 por caractere do dia. Frente: hanzi. Verso: pinyin + significado + decomposição mínima.
-- **Cards de radical** (quando aparece um novo): forma + função.
-- **Cards de palavra:** 1 por palavra comum mencionada. Não enfiar tudo num card só.
-- **Card opcional de frase:** quando aparece um chengyu (成语) ou citação relevante. Marcar como "opcional, para quando estiver mais avançado".
+- **Lista resumida:** um item por card, formato `hanzi (pinyin) — tipo`. Máximo ~8 itens.
+- **Link de download:** `[Baixar cards da matéria #NNN (CSV)](../cards/NNN-tema.csv)`
+- **Nota breve:** lembrete de que é preciso instalar o note type primeiro (link para o template).
+
+Exemplo do que produzir na matéria:
+
+```markdown
+## Para o Anki
+
+Cards desta matéria (7 cards):
+
+- 门 (mén) — character
+- 们 (men) — character
+- 问 (wèn) — character
+- 我们 (wǒmen) — word
+- 大门 (dàmén) — word
+- 门口 (ménkǒu) — word
+- 问题 (wèntí) — word
+
+[Baixar cards da matéria #002 (CSV)](../cards/002-a-porta-que-pergunta.csv)
+
+> Instale o note type com o [template](../hanzi-reader-template.apkg) antes de importar o CSV no Anki (File → Import).
+```
 
 Esta seção é a única ferramenta-de-estudo da matéria. O resto é leitura.
 

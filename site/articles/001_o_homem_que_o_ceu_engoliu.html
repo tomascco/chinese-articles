@@ -431,12 +431,71 @@ img {
 .toc a:hover {
   color: var(--accent);
 }
+
+/* Seção de setup do Anki no index */
+.anki-setup {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.anki-setup h2 {
+  margin-top: 0;
+  border-bottom: none;
+  font-size: 1.2rem;
+}
+
+.anki-setup p {
+  margin-bottom: 0.75rem;
+}
+
+.anki-setup p:last-child {
+  margin-bottom: 0;
+}
+
+.anki-setup .download-link {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: var(--radius);
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.anki-setup .download-link:hover {
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
+.anki-setup .hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* Aviso de CSV ausente */
+.csv-warning {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--surface);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-top: 1rem;
+}
 </style>
 </head>
 <body>
 <a href="#conteudo" class="skip-link">Pular para conteúdo</a>
 <div class="page">
-<nav class="site-header"><a href="index.html">← Índice</a><span>Matéria #001</span></nav>
+<nav class="site-header"><a href="../index.html">← Índice</a><span>Matéria #001</span></nav>
 <main id="conteudo">
 <article>
 <h1>O homem que o céu engoliu</h1>
@@ -478,20 +537,22 @@ img {
 <p>Há algo de notável nessa trajetória. Em sânscrito, deva ("divino") compartilha raiz com "céu" e "brilhar". Em latim, deus e dies ("dia") vêm da mesma raiz indo-europeia *dyeu- ("brilhar"). A associação entre céu e divindade é quase universal. Mas o chinês fez o percurso pelo corpo. O divino não é o que brilha lá em cima. É o que está acima da cabeça. Um teto de pele e osso.</p>
 <p>O Confucionismo levou essa lógica à arquitetura do Estado. O Taoismo, à arquitetura do corpo. No Zhuangzi (<span lang="zh">庄子</span>), texto fundamental do século IV a.C., o homem sábio é aquele que se alinha ao <span lang="zh">天</span> interior — não ao céu lá fora, mas ao céu que já está dentro, como princípio natural. A mesma palavra. O mesmo traço.</p>
 <h2 id="para-o-anki">Para o Anki</h2>
-<p><strong>Cards de caractere:</strong>
-- Frente: <span lang="zh">人</span> | Verso: rén — pessoa, ser humano (pictograma de perfil, duas pernas; radical ⺅ quando à esquerda)
-- Frente: <span lang="zh">大</span> | Verso: dà — grande (pessoa de braços abertos = grande; também radical)
-- Frente: <span lang="zh">天</span> | Verso: tiān — céu, dia, divino (traço horizontal sobre <span lang="zh">大</span> = o que está acima)</p>
-<p><strong>Cards de radical:</strong>
-- Frente: ⺅ | Verso: forma variante de <span lang="zh">人</span> quando à esquerda — "radical da pessoa", indica relação com gente (ex: <span lang="zh">你</span>, <span lang="zh">休</span>)</p>
-<p><strong>Cards de palavra:</strong>
-- Frente: <span lang="zh">大人</span> | Verso: dàrén — adulto (lit. "pessoa grande")
-- Frente: <span lang="zh">人口</span> | Verso: rénkǒu — população (lit. "pessoas-bocas")
-- Frente: <span lang="zh">今天</span> | Verso: jīntiān — hoje (lit. "este dia")
-- Frente: <span lang="zh">大学</span> | Verso: dàxué — universidade (lit. "grande estudo")
-- Frente: <span lang="zh">大家</span> | Verso: dàjiā — todo mundo (lit. "grande família")</p>
-<p><strong>Card opcional (frase/conceito):</strong>
-- Frente: <a href="https://youglish.com/pronounce/天下/chinese"><span lang="zh">天下</span></a> | Verso: tiānxià — "tudo sob o céu" → o mundo, ordem mundial chinesa (conceito; não é necessário memorizar agora)</p>
+<p>Cards desta matéria (9 cards):</p>
+<ul>
+<li><span lang="zh">人</span> (rén) — character</li>
+<li><span lang="zh">大</span> (dà) — character</li>
+<li><span lang="zh">天</span> (tiān) — character</li>
+<li>⺅ (⺅) — radical</li>
+<li><span lang="zh">大人</span> (dàrén) — word</li>
+<li><span lang="zh">人口</span> (rénkǒu) — word</li>
+<li><span lang="zh">大学</span> (dàxué) — word</li>
+<li><span lang="zh">大家</span> (dàjiā) — word</li>
+<li><span lang="zh">今天</span> (jīntiān) — word</li>
+</ul>
+<p><a href="../cards/001-o-homem-que-o-ceu-engoliu.csv">Baixar cards da matéria #001 (CSV)</a></p>
+<blockquote>
+<p>Instale o note type com o <a href="../hanzi-reader-template.apkg">template</a> antes de importar o CSV no Anki (File → Import).</p>
+</blockquote>
 <hr />
 <p>A matéria #002 vai na direção oposta: do céu para a terra. Ou melhor: para o que os chineses sempre olharam quando precisavam saber se o céu ainda estava do lado deles.</p></article>
 </main>

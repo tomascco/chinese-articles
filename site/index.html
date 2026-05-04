@@ -431,6 +431,65 @@ img {
 .toc a:hover {
   color: var(--accent);
 }
+
+/* Seção de setup do Anki no index */
+.anki-setup {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.anki-setup h2 {
+  margin-top: 0;
+  border-bottom: none;
+  font-size: 1.2rem;
+}
+
+.anki-setup p {
+  margin-bottom: 0.75rem;
+}
+
+.anki-setup p:last-child {
+  margin-bottom: 0;
+}
+
+.anki-setup .download-link {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: var(--radius);
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.anki-setup .download-link:hover {
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
+.anki-setup .hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* Aviso de CSV ausente */
+.csv-warning {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--surface);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-top: 1rem;
+}
 </style>
 </head>
 <body>
@@ -439,9 +498,15 @@ img {
 <nav class="site-header"><a href="index.html">Matérias de Hanzi</a><span>2 matérias</span></nav>
 <main id="conteudo">
 <ul class="article-list">
-<li><a href="001_o_homem_que_o_ceu_engoliu.html"><div class="item-title">O homem que o céu engoliu</div><div class="item-meta">Matéria #001 — tipo: campo semântico 3 caracteres do dia: 人 (rén), 大 (dà), 天 (tiān)</div></a></li>
-<li><a href="002_a_porta_que_pergunta.html"><div class="item-title">A porta que pergunta</div><div class="item-meta">Matéria #002 — tipo: família fonética 3 caracteres do dia: 门 (mén), 们 (men), 问 (wèn)</div></a></li>
+<li><a href="articles/001_o_homem_que_o_ceu_engoliu.html"><div class="item-title">O homem que o céu engoliu</div><div class="item-meta">Matéria #001 — tipo: campo semântico 3 caracteres do dia: 人 (rén), 大 (dà), 天 (tiān)</div></a></li>
+<li><a href="articles/002_a_porta_que_pergunta.html"><div class="item-title">A porta que pergunta</div><div class="item-meta">Matéria #002 — tipo: família fonética 3 caracteres do dia: 门 (mén), 们 (men), 问 (wèn)</div></a></li>
 </ul>
+<section class="anki-setup">
+  <h2>Setup do Anki</h2>
+  <p>Antes de importar os cards, instale o note type:</p>
+  <p><a href="hanzi-reader-template.apkg" class="download-link">Baixar hanzi-reader-template.apkg</a></p>
+  <p class="hint">Abra o arquivo no Anki para instalar o note type. Depois, importe os CSVs de cada matéria (File → Import) selecionando o note type "Hanzi Reader".</p>
+</section>
 </main>
 <footer class="site-footer">Leitura offline &middot; Tipografia serifada</footer>
 </div>
