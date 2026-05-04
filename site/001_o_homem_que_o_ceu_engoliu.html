@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Matéria de hanzi: Matéria #001 — tipo: campo semântico 3 caracteres do dia: 人 (rén), 大 (dà), 天 (tiān)...">
+<meta name="theme-color" content="#f5f0e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1f2e" media="(prefers-color-scheme: dark)">
+<title>O homem que o céu engoliu — Hanzi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Paleta quente-editorial: evoca papel artesanal e selo de tinta */
+  --bg: oklch(96.5% 0.012 75);
+  --surface: oklch(93% 0.016 75);
+  --text: oklch(24% 0.025 75);
+  --text-muted: oklch(45% 0.018 75);
+  --accent: oklch(42% 0.18 28);
+  --accent-soft: oklch(62% 0.14 28);
+  --border: oklch(84% 0.014 75);
+  --rule: oklch(78% 0.018 75);
+  --shadow: oklch(58% 0.012 75 / 0.12);
+  --font-body: "Source Serif 4", "Noto Serif SC", Georgia, serif;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SF Mono", Monaco, "Cascadia Code", monospace;
+  --line-length: 42rem;
+  --radius: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Modo escuro: azul-petróleo profundo, mantendo acento terroso */
+    --bg: oklch(19% 0.025 255);
+    --surface: oklch(24% 0.03 255);
+    --text: oklch(90% 0.012 80);
+    --text-muted: oklch(68% 0.018 75);
+    --accent: oklch(66% 0.15 30);
+    --accent-soft: oklch(76% 0.11 30);
+    --border: oklch(34% 0.025 255);
+    --rule: oklch(30% 0.022 255);
+    --shadow: oklch(10% 0.015 255 / 0.35);
+  }
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 112.5%; /* 18px base */
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 0;
+}
+
+/* Fade-in sutil no carregamento */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+article {
+  animation: fadeIn 0.5s var(--ease-out, cubic-bezier(0.25, 1, 0.5, 1)) both;
+}
+
+/* Skip link — acessibilidade */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--surface);
+  color: var(--accent);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border);
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Layout */
+.page {
+  max-width: var(--line-length);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .page {
+    padding: 2rem 1.5rem 3rem;
+  }
+}
+
+/* Tipografia — scale com contraste */
+h1, h2, h3, h4 {
+  font-family: var(--font-ui);
+  font-weight: 650;
+  line-height: 1.2;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+/* Linha decorativa sutil antes do título principal — evoca divisória editorial */
+h1::before {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2.5px;
+  background: var(--accent-soft);
+  border-radius: 2px;
+  margin-bottom: 0.6rem;
+}
+
+@media (min-width: 640px) {
+  h1::before {
+    width: 3rem;
+    height: 3px;
+  }
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2.4rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1.5px solid var(--rule);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+/* Metadados da matéria */
+.meta {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.meta em {
+  font-style: normal;
+  display: block;
+}
+
+/* Links — editorial: cor de acento sem sublinhado, revela no hover/focus */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease, background 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.25em;
+  text-decoration-color: var(--accent-soft);
+}
+
+a:focus-visible {
+  outline: 2.5px solid var(--accent-soft);
+  outline-offset: 0.15em;
+  border-radius: 0.15em;
+}
+
+/* Links no cabeçalho de meta (hanzi) — pill sutil */
+.meta a {
+  display: inline-block;
+  padding: 0.1em 0.35em;
+  border-radius: 0.3em;
+  background: transparent;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.meta a:hover {
+  background: var(--surface);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.meta a:active {
+  transform: translateY(0);
+}
+
+/* Caracteres chineses inline (code e strong) */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+  background: var(--surface);
+  padding: 0.15em 0.35em;
+  border-radius: 0.25rem;
+  color: var(--accent);
+}
+
+/* Hanzi — reforço tipográfico */
+:lang(zh), [lang="zh"] {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
+}
+
+/* Listas */
+ul, ol {
+  margin-bottom: 1.2rem;
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+  padding-left: 0.2rem;
+}
+
+/* Citações em bloco — borda sutil completa + fundo */
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-style: italic;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+blockquote:hover {
+  border-color: var(--accent-soft);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Separador temático */
+hr {
+  border: none;
+  height: 1.5px;
+  background: var(--rule);
+  margin: 2rem 0;
+}
+
+/* Tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-family: var(--font-ui);
+}
+
+th, td {
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Imagem */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  display: block;
+  margin: 1.5rem auto;
+}
+
+/* Navegação / header */
+.site-header {
+  font-family: var(--font-ui);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1.5px solid var(--rule);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-header a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.site-header span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Lista de artigos (index) — touch targets ≥ 44px */
+.article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-list li {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.article-list a {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  padding: 1.125rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s ease;
+  min-height: 44px;
+}
+
+.article-list a:hover {
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+.article-list .item-title {
+  font-family: var(--font-ui);
+  font-weight: 650;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+}
+
+.article-list .item-meta {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Rodapé */
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1.5px solid var(--rule);
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* TOC automática */
+.toc {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  background: var(--surface);
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+}
+
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.toc li {
+  margin: 0.35rem 0;
+}
+
+.toc a {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.toc a:hover {
+  color: var(--accent);
+}
+</style>
+</head>
+<body>
+<a href="#conteudo" class="skip-link">Pular para conteúdo</a>
+<div class="page">
+<nav class="site-header"><a href="index.html">← Índice</a><span>Matéria #001</span></nav>
+<main id="conteudo">
+<article>
+<h1>O homem que o céu engoliu</h1>
+<p class="meta"><em>Matéria #001 — tipo: campo semântico
+3 caracteres do dia: <a href="https://forvo.com/word/人/#zh"><span lang="zh">人</span></a> (rén), <a href="https://forvo.com/word/大/#zh"><span lang="zh">大</span></a> (dà), <a href="https://forvo.com/word/天/#zh"><span lang="zh">天</span></a> (tiān)</em></p>
+<p>Em 1963, o arqueólogo sino-americano Kwang-chih Chang publicou um artigo que incomodou boa parte do departamento de antropologia de Harvard. Chang argumentava que, para entender a China antiga, era preciso descartar uma premissa ocidental: a de que céu e terra são reinos separados, esferas de substância distinta governadas por leis próprias. Nos ossos oraculares da dinastia Shang — carapaças de tartaruga aquecidas até rachar, as primeiras inscrições chinesas conhecidas, ~1200 a.C. — o céu não era um lugar. Era uma direção. A China pensava o cosmos como hierarquia de escalas, não de essências. O divino não era feito de outra matéria. Era o humano ampliado.</p>
+<p>Para um escriba Shang, <span lang="zh">天</span> (tiān) não era a morada dos deuses. Era o que ficava acima do homem. Literalmente: um traço horizontal sobre a figura de alguém de braços abertos. O sagrado, na China antiga, não descia ao mundo. Subia dele. E a escada era o próprio corpo.</p>
+<p>Três caracteres encenam essa cosmologia em quatro traços cumulativos. Um boneco de pernas abertas. O mesmo boneco de braços abertos. Um risco por cima. É só isso. E não é pouco.</p>
+<h2 id="os-caracteres-do-dia">Os caracteres do dia</h2>
+<h3 id="ren-pessoa-ser-humano"><a href="https://youglish.com/pronounce/人/chinese"><span lang="zh">人</span></a> (rén) — pessoa, ser humano</h3>
+<p><span lang="zh">人</span> é um pictograma: uma pessoa de perfil, duas pernas em movimento. É o caractere mais básico do chinês moderno e também um dos radicais mais produtivos — aparece como componente em centenas de caracteres. Quando ocupa o lado esquerdo, muda de forma: vira ⺅, conhecido como <span lang="zh">单人旁</span> (dānrénpáng, "radical da pessoa isolada").</p>
+<p>O tom é o segundo (á), aquele que sobe como uma pergunta. Rén? Está no HSK 1.</p>
+<p>Entre as palavras comuns que o usam: <a href="https://youglish.com/pronounce/大人/chinese"><span lang="zh">大人</span></a> (dàrén), literalmente "pessoa grande", significa "adulto" — a criança é pequena, o adulto é grande, o chinês não complica. <a href="https://youglish.com/pronounce/人口/chinese"><span lang="zh">人口</span></a> (rénkǒu), "pessoas-bocas", é "população": a imagem é chã, contar gente por boca para alimentar. Nenhuma abstração.</p>
+<p><span lang="zh">人</span> não é só um caractere. É um andaime. Todo chinês que começa com ⺅ à esquerda tem algo a ver com gente: <span lang="zh">休</span> (xiū, descansar — uma pessoa encostada numa árvore), <span lang="zh">你</span> (nǐ, você). Voltaremos a ele muitas vezes.</p>
+<h3 id="da-grande"><a href="https://youglish.com/pronounce/大/chinese"><span lang="zh">大</span></a> (dà) — grande</h3>
+<p>Pegue <span lang="zh">人</span>. Abra os braços. Você tem <span lang="zh">大</span>.</p>
+<p>O pictograma é dos mais transparentes do chinês: uma pessoa de braços estendidos, o gesto universal de "era deste tamanho". O caractere funciona como adjetivo ("grande") e como radical (Kangxi 37), aparecendo em compostos como <a href="https://youglish.com/pronounce/天/chinese"><span lang="zh">天</span></a> (tiān) e <a href="https://youglish.com/pronounce/太/chinese"><span lang="zh">太</span></a> (tài, "excessivamente, muito"). <span lang="zh">太</span> é notável: é <span lang="zh">大</span> com um ponto extra embaixo. O chinês também sabe ironia — "grande demais" se escreve pondo um pingo no grande.</p>
+<p>Tom: quarto tom (à), descendente, seco. Dà. A trajetória do tom casa com o sentido: quando algo é grande, você afirma. Não pergunta.</p>
+<p>Duas palavras comuns: <a href="https://youglish.com/pronounce/大学/chinese"><span lang="zh">大学</span></a> (dàxué), "grande estudo", é "universidade". <a href="https://youglish.com/pronounce/大家/chinese"><span lang="zh">大家</span></a> (dàjiā), "grande família", é "todo mundo". Note o padrão: o chinês constrói conceitos abstratos com tijolos de concreto. A universidade não é uma instituição — é um estudo grande. O coletivo não é a sociedade — é uma família grande.</p>
+<h3 id="tian-ceu-dia-divino"><a href="https://youglish.com/pronounce/天/chinese"><span lang="zh">天</span></a> (tiān) — céu, dia, divino</h3>
+<p>Agora o salto. Sobre <span lang="zh">大</span>, ponha um risco horizontal: <span lang="zh">天</span>. O que está acima do homem de braços abertos. Céu.</p>
+<p><span lang="zh">天</span> é o caractere do dia que mais carrega peso. Significa "céu", "dia" (como em <a href="https://youglish.com/pronounce/今天/chinese"><span lang="zh">今天</span></a>, jīntiān, "hoje" — literalmente "este dia"), e "divino/providência" (como em <a href="https://youglish.com/pronounce/天子/chinese"><span lang="zh">天子</span></a>, tiānzǐ, "filho do céu", título do imperador chinês por três milênios).</p>
+<p>Tom: primeiro (ā), alto e plano. Tiān. O céu não sobe nem desce. Permanece.</p>
+<p>A estrutura formal é <span lang="zh">一</span> (yī, "um") + <span lang="zh">大</span> = <span lang="zh">天</span>, mas a história real é mais interessante. Os ossos oraculares contam uma versão diferente — e ela merece a seção de deriva, mais abaixo.</p>
+<h2 id="o-ceu-que-demite-imperadores">O céu que demite imperadores</h2>
+<p>Se <span lang="zh">人</span> (rén) é o tijolo e <span lang="zh">大</span> (dà) é a ambição, <span lang="zh">天</span> (tiān) é o teto. E o teto chinês tem opinião política.</p>
+<p>Na cosmologia clássica, o céu não é um lugar. É um princípio ativo. O caractere <span lang="zh">天</span> ancora duas ideias que governaram a China por milênios: <span lang="zh">天子</span> (tiānzǐ, "filho do céu") e <a href="https://youglish.com/pronounce/天命/chinese"><span lang="zh">天命</span></a> (tiānmìng, "mandato do céu").</p>
+<p>A mecânica do <span lang="zh">天命</span> é de uma elegância brutal. O imperador governa porque o céu autoriza. Mas o céu não assina contrato vitalício. Se o imperador é corrupto, incompetente, ou simplesmente azarado — inundações, fomes, epidemias, o céu se manifesta por sinais — o mandato é revogado. A revolta, se bem-sucedida, prova que o céu mudou de destinatário. O novo governante reina porque venceu. E venceu porque o céu quis.</p>
+<p>É teologia política de uma sofisticação que Maquiavel teria invejado. A fonte da legitimidade é externa e impessoal. Mas o teste da legitimidade é inteiramente terreno. O céu não fala. Ele vota — com o clima, com as colheitas, com a guerra. Cabe aos humanos interpretar os resultados.</p>
+<p>Isso tem consequências duradouras. Diferente do direito divino europeu (que vincula o rei a Deus por linhagem e sacramento), o mandato do céu é condicional e revogável. Nenhuma dinastia chinesa reivindicou governar por direito eterno. Todas sabiam que o céu podia mudar de endereço. A dinastia Zhou (~1046 a.C.) usou o conceito para justificar a derrubada dos Shang. Os Ming usaram contra os Yuan. Os Qing usaram contra os Ming. Sun Yat-sen, em 1912, usou contra a monarquia inteira.</p>
+<p>E <span lang="zh">天</span> está em todas essas camadas. Um caractere de quatro traços carregando o peso de uma teoria da legitimidade que durou três mil anos.</p>
+<p>A outra ponta do espectro é o cotidiano. O chinês moderno usa <span lang="zh">天</span> todo dia sem pensar em nada disso: <a href="https://youglish.com/pronounce/明天/chinese"><span lang="zh">明天</span></a> (míngtiān, "amanhã"), <a href="https://youglish.com/pronounce/昨天/chinese"><span lang="zh">昨天</span></a> (zuótiān, "ontem"), <a href="https://youglish.com/pronounce/天气/chinese"><span lang="zh">天气</span></a> (tiānqì, "clima" — literalmente "sopro do céu"). O transcendente e o mundano no mesmo caractere. O chinês parece dizer: o sagrado não é outro lugar. É este, visto de um ângulo ligeiramente diferente.</p>
+<h2 id="deriva-o-homem-de-cabeca-grande">Deriva: o homem de cabeça grande</h2>
+<p>A decomposição <span lang="zh">一</span> + <span lang="zh">大</span> = <span lang="zh">天</span> é a análise moderna e escolar. Mas debaixo dela corre outra história — e ela começa com uma cabeça desproporcional.</p>
+<p>Nos ossos oraculares da dinastia Shang (~1200 a.C.), <span lang="zh">天</span> não se escrevia com um traço horizontal sobre <span lang="zh">大</span>. O pictograma original era 𠀑: uma figura humana de perfil com a cabeça enfatizada, arredondada, grande. O caractere significava "topo da cabeça", "coroa", "cume". Não "céu".</p>
+<p>A extensão do significado é um dos movimentos mais elegantes da história da língua chinesa. Do topo da cabeça (a parte mais alta do corpo humano), passou-se ao topo de qualquer coisa. Do topo de qualquer coisa, ao topo de tudo: o firmamento, o céu, aquilo que está acima de todas as coisas. E do céu físico ao céu como princípio: o divino, a providência, o destino.</p>
+<p>Uma metáfora que virou caractere. E um caractere que virou conceito político.</p>
+<p>O Shuowen Jiezi (<span lang="zh">说文解字</span>), de 121 d.C. — o dicionário etimológico mais antigo do chinês, compilado por Xu Shen durante a dinastia Han — define <span lang="zh">天</span> como <span lang="zh">顚也</span> ("o topo da cabeça") e registra a decomposição <span lang="zh">一</span> + <span lang="zh">大</span>. A essa altura, a forma gráfica já havia evoluído: a cabeça redonda do pictograma original se achatara num traço horizontal. Mas o dicionário ainda preserva o significado original — <span lang="zh">顚</span>, "cume da cabeça". A palavra "céu", para Xu Shen, ainda era uma metáfora espacial.</p>
+<p>Há algo de notável nessa trajetória. Em sânscrito, deva ("divino") compartilha raiz com "céu" e "brilhar". Em latim, deus e dies ("dia") vêm da mesma raiz indo-europeia *dyeu- ("brilhar"). A associação entre céu e divindade é quase universal. Mas o chinês fez o percurso pelo corpo. O divino não é o que brilha lá em cima. É o que está acima da cabeça. Um teto de pele e osso.</p>
+<p>O Confucionismo levou essa lógica à arquitetura do Estado. O Taoismo, à arquitetura do corpo. No Zhuangzi (<span lang="zh">庄子</span>), texto fundamental do século IV a.C., o homem sábio é aquele que se alinha ao <span lang="zh">天</span> interior — não ao céu lá fora, mas ao céu que já está dentro, como princípio natural. A mesma palavra. O mesmo traço.</p>
+<h2 id="para-o-anki">Para o Anki</h2>
+<p><strong>Cards de caractere:</strong>
+- Frente: <span lang="zh">人</span> | Verso: rén — pessoa, ser humano (pictograma de perfil, duas pernas; radical ⺅ quando à esquerda)
+- Frente: <span lang="zh">大</span> | Verso: dà — grande (pessoa de braços abertos = grande; também radical)
+- Frente: <span lang="zh">天</span> | Verso: tiān — céu, dia, divino (traço horizontal sobre <span lang="zh">大</span> = o que está acima)</p>
+<p><strong>Cards de radical:</strong>
+- Frente: ⺅ | Verso: forma variante de <span lang="zh">人</span> quando à esquerda — "radical da pessoa", indica relação com gente (ex: <span lang="zh">你</span>, <span lang="zh">休</span>)</p>
+<p><strong>Cards de palavra:</strong>
+- Frente: <span lang="zh">大人</span> | Verso: dàrén — adulto (lit. "pessoa grande")
+- Frente: <span lang="zh">人口</span> | Verso: rénkǒu — população (lit. "pessoas-bocas")
+- Frente: <span lang="zh">今天</span> | Verso: jīntiān — hoje (lit. "este dia")
+- Frente: <span lang="zh">大学</span> | Verso: dàxué — universidade (lit. "grande estudo")
+- Frente: <span lang="zh">大家</span> | Verso: dàjiā — todo mundo (lit. "grande família")</p>
+<p><strong>Card opcional (frase/conceito):</strong>
+- Frente: <a href="https://youglish.com/pronounce/天下/chinese"><span lang="zh">天下</span></a> | Verso: tiānxià — "tudo sob o céu" → o mundo, ordem mundial chinesa (conceito; não é necessário memorizar agora)</p>
+<hr />
+<p>A matéria #002 vai na direção oposta: do céu para a terra. Ou melhor: para o que os chineses sempre olharam quando precisavam saber se o céu ainda estava do lado deles.</p></article>
+</main>
+<footer class="site-footer">Gerado para leitura offline</footer>
+</div>
+</body>
+</html>
