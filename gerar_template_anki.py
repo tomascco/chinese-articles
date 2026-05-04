@@ -223,22 +223,30 @@ hr.separator {
 
 .card.nightMode,
 .card.night_mode {
-  --paper:        #2d2420;
-  --paper-edge:   #3d3428;
-  --ink:          #f7f2e8;
-  --ink-soft:     #d8c8a8;
-  --ink-faint:    #a89878;
-  --rule:         #5a5048;
-  --carmim:       #ff8080;
-  --carmim-soft:  #e88888;
-  background: var(--paper);
-  box-shadow: none;
+  --paper:        #2a2318;
+  --paper-edge:   #3a3228;
+  --ink:          #f2e8d5;
+  --ink-soft:     #c4b898;
+  --ink-faint:    #8a7d68;
+  --rule:         #4a4035;
+  --carmim:       #e07070;
+  --carmim-soft:  #c85a5a;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(184,160,120,0.05) 0%, transparent 40%),
+    radial-gradient(circle at 80% 90%, rgba(139,26,26,0.03) 0%, transparent 50%),
+    var(--paper);
+  color: var(--ink);
+  box-shadow:
+    0 1px 2px rgba(0,0,0,0.2),
+    0 8px 24px rgba(0,0,0,0.25),
+    inset 0 0 60px rgba(139,90,40,0.03);
   border-color: var(--paper-edge);
 }
 
 .card.nightMode::before,
 .card.night_mode::before {
-  display: none;
+  mix-blend-mode: normal;
+  opacity: 0.08;
 }
 
 .card.nightMode .hanzi,
