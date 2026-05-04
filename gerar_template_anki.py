@@ -221,8 +221,8 @@ hr.separator {
   z-index: 1;
 }
 
-.nightMode .card,
-.night_mode .card {
+.card.nightMode,
+.card.night_mode {
   --paper:        #2d2420;
   --paper-edge:   #3d3428;
   --ink:          #f7f2e8;
@@ -236,51 +236,51 @@ hr.separator {
   border-color: var(--paper-edge);
 }
 
-.nightMode .card::before,
-.night_mode .card::before {
+.card.nightMode::before,
+.card.night_mode::before {
   display: none;
 }
 
-.nightMode .hanzi,
-.night_mode .hanzi {
+.card.nightMode .hanzi,
+.card.night_mode .hanzi {
   color: #ffffff;
   text-shadow: none;
 }
 
-.nightMode .pinyin,
-.night_mode .pinyin {
+.card.nightMode .pinyin,
+.card.night_mode .pinyin {
   color: #ff9e9e;
 }
 
-.nightMode .significado,
-.night_mode .significado {
+.card.nightMode .significado,
+.card.night_mode .significado {
   color: #e8dcc4;
 }
 
-.nightMode .detalhe,
-.night_mode .detalhe {
+.card.nightMode .detalhe,
+.card.night_mode .detalhe {
   color: #f0e8d8;
 }
 
-.nightMode .detalhe.notas,
-.night_mode .detalhe.notas {
+.card.nightMode .detalhe.notas,
+.card.night_mode .detalhe.notas {
   color: #d8c8a8;
   border-color: #e88888;
 }
 
-.nightMode .youglish-link,
-.night_mode .youglish-link {
+.card.nightMode .youglish-link,
+.card.night_mode .youglish-link {
   color: #ff9e9e;
   border-color: #ff9e9e;
 }
 
-.nightMode .producao-prompt .pinyin-big,
-.night_mode .producao-prompt .pinyin-big {
+.card.nightMode .producao-prompt .pinyin-big,
+.card.night_mode .producao-prompt .pinyin-big {
   color: #ff9e9e;
 }
 
-.nightMode .producao-prompt .significado-big,
-.night_mode .producao-prompt .significado-big {
+.card.nightMode .producao-prompt .significado-big,
+.card.night_mode .producao-prompt .significado-big {
   color: #e8dcc4;
 }
 """
