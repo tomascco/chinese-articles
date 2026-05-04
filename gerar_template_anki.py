@@ -223,29 +223,65 @@ hr.separator {
 
 .nightMode .card,
 .night_mode .card {
-  --paper:        #2a2318;
-  --paper-edge:   #3a3228;
-  --ink:          #f2e8d5;
-  --ink-soft:     #c4b898;
-  --ink-faint:    #8a7d68;
-  --rule:         #4a4035;
-  --carmim:       #e07070;
-  --carmim-soft:  #c85a5a;
-  background:
-    radial-gradient(circle at 20% 10%, rgba(224,112,112,0.06) 0%, transparent 40%),
-    radial-gradient(circle at 80% 90%, rgba(196,184,152,0.05) 0%, transparent 50%),
-    var(--paper);
+  --paper:        #2d2420;
+  --paper-edge:   #3d3428;
+  --ink:          #f7f2e8;
+  --ink-soft:     #d8c8a8;
+  --ink-faint:    #a89878;
+  --rule:         #5a5048;
+  --carmim:       #ff8080;
+  --carmim-soft:  #e88888;
+  background: var(--paper);
+  box-shadow: none;
+  border-color: var(--paper-edge);
 }
 
 .nightMode .card::before,
 .night_mode .card::before {
-  mix-blend-mode: soft-light;
-  opacity: 0.15;
+  display: none;
 }
 
 .nightMode .hanzi,
 .night_mode .hanzi {
+  color: #ffffff;
   text-shadow: none;
+}
+
+.nightMode .pinyin,
+.night_mode .pinyin {
+  color: #ff9e9e;
+}
+
+.nightMode .significado,
+.night_mode .significado {
+  color: #e8dcc4;
+}
+
+.nightMode .detalhe,
+.night_mode .detalhe {
+  color: #f0e8d8;
+}
+
+.nightMode .detalhe.notas,
+.night_mode .detalhe.notas {
+  color: #d8c8a8;
+  border-color: #e88888;
+}
+
+.nightMode .youglish-link,
+.night_mode .youglish-link {
+  color: #ff9e9e;
+  border-color: #ff9e9e;
+}
+
+.nightMode .producao-prompt .pinyin-big,
+.night_mode .producao-prompt .pinyin-big {
+  color: #ff9e9e;
+}
+
+.nightMode .producao-prompt .significado-big,
+.night_mode .producao-prompt .significado-big {
+  color: #e8dcc4;
 }
 """
 
