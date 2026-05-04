@@ -25,6 +25,7 @@ CSS_CORE = """
 }
 
 html {
+  height: 100%;
   font-size: 112.5%; /* 18px base */
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
@@ -42,6 +43,8 @@ html {
 }
 
 body {
+  min-height: 100vh;
+  min-height: 100dvh;
   font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
