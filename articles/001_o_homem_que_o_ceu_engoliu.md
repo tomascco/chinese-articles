@@ -17,7 +17,7 @@ Três caracteres encenam essa cosmologia em quatro traços cumulativos. Um bonec
 
 O tom é o segundo (á), aquele que sobe como uma pergunta. Rén? Está no HSK 1.
 
-Entre as palavras comuns que o usam: [大人](https://youglish.com/pronounce/大人/chinese) (dàrén), literalmente "pessoa grande", significa "adulto" — a criança é pequena, o adulto é grande, o chinês não complica. [人口](https://youglish.com/pronounce/人口/chinese) (rénkǒu), "pessoas-bocas", é "população": a imagem é chã, contar gente por boca para alimentar. Nenhuma abstração.
+Entre as palavras comuns que o usam: [大人](https://youglish.com/pronounce/大人/chinese) (dàrén), literalmente "pessoa grande", significa "adulto" — a criança é pequena, o adulto é grande, o chinês não complica. [人口](https://youglish.com/pronounce/人口/chinese) (rénkǒu), "pessoas-bocas", é "população": a imagem é concreta, contar gente por boca para alimentar. Nenhuma abstração.
 
 人 não é só um caractere. É um andaime. Todo chinês que começa com ⺅ à esquerda tem algo a ver com gente: 休 (xiū, descansar — uma pessoa encostada numa árvore), 你 (nǐ, você). Voltaremos a ele muitas vezes.
 

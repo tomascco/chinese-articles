@@ -7,3 +7,11 @@
 - **Tema da deriva:** Origem do caractere 天 nos ossos oraculares — do pictograma de "pessoa de cabeça grande" (topo da cabeça) à extensão para "céu"
 - **Componentes/radicais introduzidos:** 人 (Kangxi 9, variante ⺅), 大 (Kangxi 37)
 - **Palavras mencionadas:** 大人, 人口, 大学, 大家, 今天, 天子, 天命, 明天, 昨天, 天气, 天下
+
+## Matéria #002
+- **Tipo:** a (família fonética)
+- **Caracteres cobertos:** 门 (mén), 们 (men), 问 (wèn)
+- **Tema cultural principal:** O significado cultural e social da porta na China — da arquitetura dos pátios às metáforas de pertencimento e conhecimento
+- **Tema da deriva:** Os deuses da porta (门神) — origem na dinastia Tang e persistência da tradição até o presente
+- **Componentes/radicais introduzidos:** 门 (Kangxi 169), 口 (kǒu)
+- **Palavras mencionadas:** 大门, 门口, 开门, 我们, 你们, 他们, 朋友们, 问题, 请问, 学问, 进门, 上门, 破门, 门神
