@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Matéria de hanzi: Matéria #003 — tipo: campo semântico 3 caracteres do dia: 山 (shān), 水 (shuǐ), 火 (huǒ)...">
+<meta name="theme-color" content="#f5f0e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1f2e" media="(prefers-color-scheme: dark)">
+<title>O que arde, corre e fica — Hanzi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Paleta quente-editorial: evoca papel artesanal e selo de tinta */
+  --bg: oklch(96.5% 0.012 75);
+  --surface: oklch(93% 0.016 75);
+  --text: oklch(24% 0.025 75);
+  --text-muted: oklch(45% 0.018 75);
+  --accent: oklch(42% 0.18 28);
+  --accent-soft: oklch(62% 0.14 28);
+  --border: oklch(84% 0.014 75);
+  --rule: oklch(78% 0.018 75);
+  --shadow: oklch(58% 0.012 75 / 0.12);
+  --font-body: "Source Serif 4", "Noto Serif SC", Georgia, serif;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SF Mono", Monaco, "Cascadia Code", monospace;
+  --line-length: 42rem;
+  --radius: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Modo escuro: azul-petróleo profundo, mantendo acento terroso */
+    --bg: oklch(19% 0.025 255);
+    --surface: oklch(24% 0.03 255);
+    --text: oklch(90% 0.012 80);
+    --text-muted: oklch(68% 0.018 75);
+    --accent: oklch(66% 0.15 30);
+    --accent-soft: oklch(76% 0.11 30);
+    --border: oklch(34% 0.025 255);
+    --rule: oklch(30% 0.022 255);
+    --shadow: oklch(10% 0.015 255 / 0.35);
+  }
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 112.5%; /* 18px base */
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 0;
+}
+
+/* Fade-in sutil no carregamento */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+article {
+  animation: fadeIn 0.5s var(--ease-out, cubic-bezier(0.25, 1, 0.5, 1)) both;
+}
+
+/* Skip link — acessibilidade */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--surface);
+  color: var(--accent);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border);
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Layout */
+.page {
+  max-width: var(--line-length);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .page {
+    padding: 2rem 1.5rem 3rem;
+  }
+}
+
+/* Tipografia — scale com contraste */
+h1, h2, h3, h4 {
+  font-family: var(--font-ui);
+  font-weight: 650;
+  line-height: 1.2;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+/* Linha decorativa sutil antes do título principal — evoca divisória editorial */
+h1::before {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2.5px;
+  background: var(--accent-soft);
+  border-radius: 2px;
+  margin-bottom: 0.6rem;
+}
+
+@media (min-width: 640px) {
+  h1::before {
+    width: 3rem;
+    height: 3px;
+  }
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2.4rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1.5px solid var(--rule);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+/* Metadados da matéria */
+.meta {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.meta em {
+  font-style: normal;
+  display: block;
+}
+
+/* Links — editorial: cor de acento sem sublinhado, revela no hover/focus */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease, background 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.25em;
+  text-decoration-color: var(--accent-soft);
+}
+
+a:focus-visible {
+  outline: 2.5px solid var(--accent-soft);
+  outline-offset: 0.15em;
+  border-radius: 0.15em;
+}
+
+/* Links no cabeçalho de meta (hanzi) — pill sutil */
+.meta a {
+  display: inline-block;
+  padding: 0.1em 0.35em;
+  border-radius: 0.3em;
+  background: transparent;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.meta a:hover {
+  background: var(--surface);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.meta a:active {
+  transform: translateY(0);
+}
+
+/* Caracteres chineses inline (code e strong) */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+  background: var(--surface);
+  padding: 0.15em 0.35em;
+  border-radius: 0.25rem;
+  color: var(--accent);
+}
+
+/* Hanzi — reforço tipográfico */
+:lang(zh), [lang="zh"] {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
+}
+
+/* Listas */
+ul, ol {
+  margin-bottom: 1.2rem;
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+  padding-left: 0.2rem;
+}
+
+/* Citações em bloco — borda sutil completa + fundo */
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-style: italic;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+blockquote:hover {
+  border-color: var(--accent-soft);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Separador temático */
+hr {
+  border: none;
+  height: 1.5px;
+  background: var(--rule);
+  margin: 2rem 0;
+}
+
+/* Tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-family: var(--font-ui);
+}
+
+th, td {
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Imagem */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  display: block;
+  margin: 1.5rem auto;
+}
+
+/* Navegação / header */
+.site-header {
+  font-family: var(--font-ui);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1.5px solid var(--rule);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-header a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.site-header span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Lista de artigos (index) — touch targets ≥ 44px */
+.article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-list li {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.article-list a {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  padding: 1.125rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s ease;
+  min-height: 44px;
+}
+
+.article-list a:hover {
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+.article-list .item-title {
+  font-family: var(--font-ui);
+  font-weight: 650;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+}
+
+.article-list .item-meta {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Rodapé */
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1.5px solid var(--rule);
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* TOC automática */
+.toc {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  background: var(--surface);
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+}
+
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.toc li {
+  margin: 0.35rem 0;
+}
+
+.toc a {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.toc a:hover {
+  color: var(--accent);
+}
+
+/* Seção de setup do Anki no index */
+.anki-setup {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.anki-setup h2 {
+  margin-top: 0;
+  border-bottom: none;
+  font-size: 1.2rem;
+}
+
+.anki-setup p {
+  margin-bottom: 0.75rem;
+}
+
+.anki-setup p:last-child {
+  margin-bottom: 0;
+}
+
+.anki-setup .download-link {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: var(--radius);
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.anki-setup .download-link:hover {
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
+.anki-setup .hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* Aviso de CSV ausente */
+.csv-warning {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--surface);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-top: 1rem;
+}
+</style>
+</head>
+<body>
+<a href="#conteudo" class="skip-link">Pular para conteúdo</a>
+<div class="page">
+<nav class="site-header"><a href="../index.html">← Índice</a><span>Matéria #003</span></nav>
+<main id="conteudo">
+<article>
+<h1>O que arde, corre e fica</h1>
+<p class="meta"><em>Matéria #003 — tipo: campo semântico
+3 caracteres do dia: <a href="https://youglish.com/pronounce/山/chinese"><span lang="zh">山</span></a> (shān), <a href="https://youglish.com/pronounce/水/chinese"><span lang="zh">水</span></a> (shuǐ), <a href="https://youglish.com/pronounce/火/chinese"><span lang="zh">火</span></a> (huǒ)</em></p>
+<p>Em 1072, um pintor chamado Fan Kuan concluiu uma pintura em seda com dois metros de altura. No canto inferior direito, entre rochas e cascatas, um grupo de mulas carregadas cruza um caminho. Acima delas, uma montanha ocupa dois terços da tela. Não é metáfora: a montanha literalmente ocupa dois terços do espaço. O ser humano cabe na ponta do dedo.</p>
+<p>A pintura se chama "Viajantes entre montanhas e riachos" (<span lang="zh">溪山行旅图</span>, Xī Shān Xíng Lǚ Tú) e é considerada uma das obras-primas da <a href="https://youglish.com/pronounce/山水画/chinese"><span lang="zh">山水画</span></a> (shānshuǐhuà), a pintura de paisagem chinesa. O termo já entrega o jogo: montanha-água-pintura. Dois elementos, um gênero inteiro. Para um pintor chinês da dinastia Song, paisagem não era paisagem se não tivesse montanha e água. O resto — árvores, nuvens, pontes, gente — era acessório.</p>
+<p>E o fogo? O fogo não aparece na <a href="https://youglish.com/pronounce/山水画/chinese"><span lang="zh">山水画</span></a> clássica. Não se pinta incêndio numa cascata. Mas o fogo estava lá, nas cozinhas dos vilarejos que os pintores ignoravam, nos fornos que coziam a porcelana Song, na pólvora que os alquimistas taoistas tinham descoberto três séculos antes tentando fabricar o elixir da imortalidade. O fogo transforma. E na cultura chinesa, o que transforma nunca está longe do que permanece.</p>
+<p>Hoje três caracteres elementares: <a href="https://youglish.com/pronounce/山/chinese"><span lang="zh">山</span></a>, <a href="https://youglish.com/pronounce/水/chinese"><span lang="zh">水</span></a>, <a href="https://youglish.com/pronounce/火/chinese"><span lang="zh">火</span></a>. Montanha, água, fogo. O que fica, o que corre, o que arde.</p>
+<h2 id="os-caracteres-do-dia">Os caracteres do dia</h2>
+<h3 id="shan-montanha-monte"><span lang="zh">山</span> (shān) — montanha, monte</h3>
+<p>O caractere <a href="https://youglish.com/pronounce/山/chinese"><span lang="zh">山</span></a> é um pictograma direto: três picos, o central mais alto que os laterais. Vem dos ossos oraculares da dinastia Shang (~1200 a.C.) e não mudou muito em três milênios. A forma é tão estável quanto o que representa.</p>
+<p><a href="https://youglish.com/pronounce/山/chinese"><span lang="zh">山</span></a> é o radical Kangxi 37. Como componente, aparece em caracteres relacionados a montanhas e elevações: <a href="https://youglish.com/pronounce/岛/chinese"><span lang="zh">岛</span></a> (dǎo, ilha), <a href="https://youglish.com/pronounce/峰/chinese"><span lang="zh">峰</span></a> (fēng, pico), <a href="https://youglish.com/pronounce/岩/chinese"><span lang="zh">岩</span></a> (yán, rochedo). A forma comprimida mantém os três traços verticais mas reduz a largura.</p>
+<p>Pronúncia: shān, primeiro tom (alto e sustentado — imagine segurar uma nota musical).</p>
+<p>Palavras que o usam:
+- <a href="https://youglish.com/pronounce/山水/chinese"><span lang="zh">山水</span></a> (shānshuǐ) — paisagem, literalmente "montanha-água". A combinação das duas metades essenciais da paisagem chinesa.
+- <a href="https://youglish.com/pronounce/火山/chinese"><span lang="zh">火山</span></a> (huǒshān) — vulcão, literalmente "montanha de fogo". Um dos exemplos mais didáticos de como o chinês compõe sentido por justaposição.
+- <a href="https://youglish.com/pronounce/上山/chinese"><span lang="zh">上山</span></a> (shàngshān) — subir a montanha. <a href="https://youglish.com/pronounce/上/chinese"><span lang="zh">上</span></a> (shàng) significa "subir" ou "em cima" — verbo + alvo, sem preposição.</p>
+<p>O radical <a href="https://youglish.com/pronounce/山/chinese"><span lang="zh">山</span></a> não é apenas pictórico; é um conceito geográfico com peso civilizacional. As cinco montanhas sagradas do taoismo (<span lang="zh">五岳</span>, Wǔ Yuè) são centros de peregrinação há mais de dois mil anos. A montanha, na China antiga, era o lugar mais próximo do <a href="https://youglish.com/pronounce/天/chinese"><span lang="zh">天</span></a> (tiān), que visitamos na matéria #001.</p>
+<h3 id="shui-agua-liquido"><span lang="zh">水</span> (shuǐ) — água, líquido</h3>
+<p><a href="https://youglish.com/pronounce/水/chinese"><span lang="zh">水</span></a> também é um pictograma dos ossos oraculares: uma linha vertical central com traços diagonais — a corrente e os respingos. Representa água corrente, não água parada (para água parada, o chinês usa outras palavras, como <span lang="zh">池</span>, chí).</p>
+<p>É o radical Kangxi 85. Como componente à esquerda de outros caracteres, <a href="https://youglish.com/pronounce/水/chinese"><span lang="zh">水</span></a> se comprime em três pontinhos: <span lang="zh">氵</span>. Esta forma, chamada <a href="https://youglish.com/pronounce/三点水/chinese"><span lang="zh">三点水</span></a> (sāndiǎnshuǐ, "três-pontos-d'água"), aparece em dezenas de caracteres relacionados a líquidos: <a href="https://youglish.com/pronounce/河/chinese"><span lang="zh">河</span></a> (hé, rio), <a href="https://youglish.com/pronounce/海/chinese"><span lang="zh">海</span></a> (hǎi, mar), <a href="https://youglish.com/pronounce/酒/chinese"><span lang="zh">酒</span></a> (jiǔ, bebida alcoólica), <a href="https://youglish.com/pronounce/洗/chinese"><span lang="zh">洗</span></a> (xǐ, lavar). Quando você vir <span lang="zh">氵</span> à esquerda de um caractere, o significado provavelmente tem a ver com líquido.</p>
+<p>Pronúncia: shuǐ, terceiro tom (aquele que cai e sobe — grave no meio, como se você estivesse hesitando).</p>
+<p>Palavras:
+- <a href="https://youglish.com/pronounce/水果/chinese"><span lang="zh">水果</span></a> (shuǐguǒ) — fruta, literalmente "fruto-d'água". A imagem é de um fruto suculento.
+- <a href="https://youglish.com/pronounce/喝水/chinese"><span lang="zh">喝水</span></a> (hē shuǐ) — beber água. <a href="https://youglish.com/pronounce/喝/chinese"><span lang="zh">喝</span></a> (hē) é beber.
+- <a href="https://youglish.com/pronounce/山水/chinese"><span lang="zh">山水</span></a> (shānshuǐ) — o par que fecha com <a href="https://youglish.com/pronounce/山/chinese"><span lang="zh">山</span></a>. Paisagem, em chinês, é um binômio indissociável.</p>
+<p>Há uma observação etimológica que vale o desvio: o caractere <a href="https://youglish.com/pronounce/永/chinese"><span lang="zh">永</span></a> (yǒng, eterno) compartilha a mesma origem gráfica de <a href="https://youglish.com/pronounce/水/chinese"><span lang="zh">水</span></a>. Nos ossos oraculares, <a href="https://youglish.com/pronounce/永/chinese"><span lang="zh">永</span></a> era uma variante alongada do pictograma de água corrente — água que flui sem parar. Daí a extensão semântica: o que flui eternamente. Essa conexão é etimologia histórica real, documentada nos ossos oraculares.</p>
+<h3 id="huo-fogo"><span lang="zh">火</span> (huǒ) — fogo</h3>
+<p><a href="https://youglish.com/pronounce/火/chinese"><span lang="zh">火</span></a> é um pictograma de chamas: labaredas subindo. Os ossos oraculares preservam a imagem de fogo com traços centrais e pontos laterais. É o radical Kangxi 86.</p>
+<p>Como radical, <a href="https://youglish.com/pronounce/火/chinese"><span lang="zh">火</span></a> pode aparecer em várias posições. À esquerda de um caractere, mantém sua forma original mas comprimida (<a href="https://youglish.com/pronounce/灯/chinese"><span lang="zh">灯</span></a>, dēng, lâmpada; <a href="https://youglish.com/pronounce/烤/chinese"><span lang="zh">烤</span></a>, kǎo, assar). Na base do caractere, frequentemente se transforma em quatro pontinhos horizontais: <span lang="zh">灬</span> (<a href="https://youglish.com/pronounce/热/chinese"><span lang="zh">热</span></a>, rè, quente; <a href="https://youglish.com/pronounce/煮/chinese"><span lang="zh">煮</span></a>, zhǔ, cozinhar). Este radical é chamado <a href="https://youglish.com/pronounce/四点底/chinese"><span lang="zh">四点底</span></a> (sìdiǎndǐ, "fundo de quatro pontos").</p>
+<p>Pronúncia: huǒ, terceiro tom (mesma melodia de shuǐ — cai e sobe). Cuidado com a aspiração do h inicial: é um som que o português não tem, mais gutural, como o h do inglês "hot" ou o j do espanhol "jalapeño".</p>
+<p>Palavras:
+- <a href="https://youglish.com/pronounce/火山/chinese"><span lang="zh">火山</span></a> (huǒshān) — vulcão. Completa o triângulo: montanha + fogo.
+- <a href="https://youglish.com/pronounce/火车/chinese"><span lang="zh">火车</span></a> (huǒchē) — trem, literalmente "veículo de fogo". Quando as primeiras locomotivas a vapor chegaram à China no final do século XIX, o nome popular que grudou foi esse. <a href="https://youglish.com/pronounce/车/chinese"><span lang="zh">车</span></a> (chē) é veículo.
+- <a href="https://youglish.com/pronounce/大火/chinese"><span lang="zh">大火</span></a> (dàhuǒ) — grande incêndio, conflagração. <a href="https://youglish.com/pronounce/大/chinese"><span lang="zh">大</span></a> (dà, grande) + <span lang="zh">火</span>.</p>
+<p>O fogo na cultura chinesa tem camadas: é um dos cinco elementos (<span lang="zh">五行</span>, wǔxíng), está associado ao coração e à cor vermelha na medicina tradicional, e foi o meio pelo qual os alquimistas taoistas acidentalmente inventaram a pólvora no século IX.</p>
+<h2 id="ceu-terra-e-os-tres-que-estao-no-meio">Céu, terra e os três que estão no meio</h2>
+<p>O extraordinário desses três caracteres é que eles formam um sistema. Pegue <a href="https://youglish.com/pronounce/山/chinese"><span lang="zh">山</span></a> e <a href="https://youglish.com/pronounce/水/chinese"><span lang="zh">水</span></a> — você tem <a href="https://youglish.com/pronounce/山水/chinese"><span lang="zh">山水</span></a>, paisagem. Pegue <a href="https://youglish.com/pronounce/火/chinese"><span lang="zh">火</span></a> e <a href="https://youglish.com/pronounce/山/chinese"><span lang="zh">山</span></a> — <a href="https://youglish.com/pronounce/火山/chinese"><span lang="zh">火山</span></a>, vulcão. Nenhum desses compostos precisa de partícula, preposição ou cópula. É só encostar um caractere no outro.</p>
+<p>Isso é chinês operando no seu registro mais direto: dois conceitos justapostos produzem um terceiro. A gramática da composição de palavras é, na prática, uma ontologia. Montanha que cospe fogo = vulcão. Montanha e água = paisagem. Não há "de" ligando, não há "com" mediando. A relação fica implícita — e cabe a quem lê conectar os pontos.</p>
+<p>A cosmologia chinesa dos <a href="https://youglish.com/pronounce/五行/chinese"><span lang="zh">五行</span></a> (wǔxíng) — os cinco elementos ou cinco fases — organiza o mundo em madeira (<span lang="zh">木</span>, mù), fogo (<a href="https://youglish.com/pronounce/火/chinese"><span lang="zh">火</span></a>, huǒ), terra (<span lang="zh">土</span>, tǔ), metal (<span lang="zh">金</span>, jīn) e água (<a href="https://youglish.com/pronounce/水/chinese"><span lang="zh">水</span></a>, shuǐ). Não são "elementos" no sentido grego de tijolos fundamentais da matéria. São fases de transformação — o que a sinologia moderna traduz como "cinco agentes" ou "cinco processos". Água apaga fogo. Fogo derrete metal. Metal corta madeira. Madeira cobre a terra. Terra represa a água. É um sistema cíclico, não hierárquico.</p>
+<p>O dado curioso: <a href="https://youglish.com/pronounce/山/chinese"><span lang="zh">山</span></a> não está nos <a href="https://youglish.com/pronounce/五行/chinese"><span lang="zh">五行</span></a>. A montanha é um acidente geográfico, não um princípio cósmico. No entanto ela domina a arte visual, a geografia sagrada e o imaginário poético muito mais do que madeira ou metal. O <a href="https://youglish.com/pronounce/五行/chinese"><span lang="zh">五行</span></a> é a teoria abstrata; a montanha é a experiência concreta. E o chinês, como língua, tende a preferir o concreto.</p>
+<p>Quando você olha para a China de um satélite, o que vê são <a href="https://youglish.com/pronounce/山/chinese"><span lang="zh">山</span></a> e <a href="https://youglish.com/pronounce/水/chinese"><span lang="zh">水</span></a>. As montanhas do oeste (Himalaia, Kunlun, Tian Shan) bloqueiam a umidade, criando desertos. Os rios (<span lang="zh">河</span>, hé, e <span lang="zh">江</span>, jiāng) cortam planícies onde 94% da população vive. O <a href="https://youglish.com/pronounce/火/chinese"><span lang="zh">火</span></a> fica nas entrelinhas: nos fornos de Jingdezhen que cozinham porcelana há mil anos, nas lareiras das casas-caverna (<span lang="zh">窑洞</span>, yáodòng) do planalto do loess, nos altos-fornos que hoje produzem metade do aço do planeta.</p>
+<p>Três palavras. Uma civilização inteira cabe entre elas.</p>
+<h2 id="deriva-a-paisagem-que-nao-cabe-no-quadro">Deriva: A paisagem que não cabe no quadro</h2>
+<p>A <a href="https://youglish.com/pronounce/山水画/chinese"><span lang="zh">山水画</span></a> não é um gênero de pintura. É uma tradição de pensamento visual que durou mais de mil anos — da dinastia Tang (618-907) até o século XX — e produziu o equivalente chinês ao que a pintura a óleo foi para a Europa.</p>
+<p>Mas há uma diferença de fundo. Enquanto a pintura de paisagem europeia se preocupava com a representação fiel (perspectiva linear, proporção, realismo atmosférico), a <a href="https://youglish.com/pronounce/山水画/chinese"><span lang="zh">山水画</span></a> se preocupava com o espírito da paisagem. O termo técnico é <span lang="zh">气韵</span> (qìyùn) — "ressonância do sopro vital" — uma das seis leis da pintura formuladas por Xie He no século V. A montanha pintada não precisava se parecer com uma montanha real. Precisava respirar como uma.</p>
+<p>Guo Xi, pintor da dinastia Song do Norte (século XI), escreveu um tratado que estabeleceu as três distâncias da paisagem: alta distância (<span lang="zh">高远</span>, gāoyuǎn — olhar de baixo para o pico), profunda distância (<span lang="zh">深远</span>, shēnyuǎn — olhar através de camadas sobrepostas de montanhas) e plana distância (<span lang="zh">平远</span>, píngyuǎn — olhar do alto para o horizonte). Uma única pintura podia conter as três simultaneamente, o que no Ocidente seria uma violação da perspectiva — e na China era justamente o ponto.</p>
+<p>A montanha, nessa tradição, não é cenário. É protagonista. A água é o contraponto — o que se move, o que reflete, o que esculpe. As figuras humanas, quando existem, são minúsculas: um pescador solitário, um eremita cruzando uma ponte. Não há heróis na <a href="https://youglish.com/pronounce/山水画/chinese"><span lang="zh">山水画</span></a>. Só hóspedes.</p>
+<p>Essa tradição explica por que <a href="https://youglish.com/pronounce/山水/chinese"><span lang="zh">山水</span></a> entrou no vocabulário cotidiano como sinônimo de paisagem. Não se diz "paisagem" com uma palavra abstrata; diz-se "montanha-água". A língua faz o mesmo que o pintor: nomeia o essencial e deixa o resto subentendido.</p>
+<h2 id="para-o-anki">Para o Anki</h2>
+<p>Cards desta matéria (7 cards):</p>
+<ul>
+<li><a href="https://youglish.com/pronounce/山/chinese"><span lang="zh">山</span></a> (shān) — character</li>
+<li><a href="https://youglish.com/pronounce/水/chinese"><span lang="zh">水</span></a> (shuǐ) — character</li>
+<li><a href="https://youglish.com/pronounce/火/chinese"><span lang="zh">火</span></a> (huǒ) — character</li>
+<li><a href="https://youglish.com/pronounce/山水/chinese"><span lang="zh">山水</span></a> (shānshuǐ) — word</li>
+<li><a href="https://youglish.com/pronounce/火山/chinese"><span lang="zh">火山</span></a> (huǒshān) — word</li>
+<li><a href="https://youglish.com/pronounce/水果/chinese"><span lang="zh">水果</span></a> (shuǐguǒ) — word</li>
+<li><a href="https://youglish.com/pronounce/火车/chinese"><span lang="zh">火车</span></a> (huǒchē) — word</li>
+</ul>
+<p><a href="../cards/003-o-que-arde-corre-e-fica.csv">Baixar cards da matéria #003 (CSV)</a></p>
+<blockquote>
+<p>Instale o note type com o <a href="../hanzi-reader-template.apkg">template</a> antes de importar o CSV no Anki (File → Import).</p>
+</blockquote>
+<hr />
+<p>Cruzamos a porta da matéria #002 e saímos ao ar livre. É um mundo de <a href="https://youglish.com/pronounce/山/chinese"><span lang="zh">山</span></a> e <a href="https://youglish.com/pronounce/水/chinese"><span lang="zh">水</span></a>, com <a href="https://youglish.com/pronounce/火/chinese"><span lang="zh">火</span></a> escondido embaixo. Faltam dois elementos para o pentágono taoista fechar. Madeira e metal vêm noutra edição — mas antes disso, na matéria #004, vamos olhar para o chão.</p></article>
+</main>
+<footer class="site-footer">Gerado para leitura offline</footer>
+</div>
+</body>
+</html>

@@ -15,3 +15,11 @@
 - **Tema da deriva:** Os deuses da porta (门神) — origem na dinastia Tang e persistência da tradição até o presente
 - **Componentes/radicais introduzidos:** 门 (Kangxi 169), 口 (kǒu)
 - **Palavras mencionadas:** 大门, 门口, 开门, 我们, 你们, 他们, 朋友们, 问题, 请问, 学问, 进门, 上门, 破门, 门神
+
+## Matéria #003
+- **Tipo:** b (campo semântico)
+- **Caracteres cobertos:** 山 (shān), 水 (shuǐ), 火 (huǒ)
+- **Tema cultural principal:** A relação entre os três elementos naturais — montanha, água, fogo — na cosmologia chinesa (五行) e na arte da paisagem (山水画)
+- **Tema da deriva:** A pintura de paisagem chinesa 山水画 — tradição de pensamento visual, as três distâncias de Guo Xi, e a diferença fundamental com a paisagem ocidental
+- **Componentes/radicais introduzidos:** 山 (Kangxi 37), 水 / 氵 (Kangxi 85), 火 / 灬 (Kangxi 86)
+- **Palavras mencionadas:** 山水, 火山, 上山, 水果, 喝水, 火车, 大火, 山水画
