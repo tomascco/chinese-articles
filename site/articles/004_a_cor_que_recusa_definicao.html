@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Matéria de hanzi: Matéria #004 — tipo: família fonética 3 caracteres do dia: 青 (qīng), 清 (qīng), 情 (qíng)...">
+<meta name="theme-color" content="#f5f0e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1f2e" media="(prefers-color-scheme: dark)">
+<title>A cor que recusa definição — Hanzi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Paleta quente-editorial: evoca papel artesanal e selo de tinta */
+  --bg: oklch(96.5% 0.012 75);
+  --surface: oklch(93% 0.016 75);
+  --text: oklch(24% 0.025 75);
+  --text-muted: oklch(45% 0.018 75);
+  --accent: oklch(42% 0.18 28);
+  --accent-soft: oklch(62% 0.14 28);
+  --border: oklch(84% 0.014 75);
+  --rule: oklch(78% 0.018 75);
+  --shadow: oklch(58% 0.012 75 / 0.12);
+  --font-body: "Source Serif 4", "Noto Serif SC", Georgia, serif;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SF Mono", Monaco, "Cascadia Code", monospace;
+  --line-length: 42rem;
+  --radius: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Modo escuro: azul-petróleo profundo, mantendo acento terroso */
+    --bg: oklch(19% 0.025 255);
+    --surface: oklch(24% 0.03 255);
+    --text: oklch(90% 0.012 80);
+    --text-muted: oklch(68% 0.018 75);
+    --accent: oklch(66% 0.15 30);
+    --accent-soft: oklch(76% 0.11 30);
+    --border: oklch(34% 0.025 255);
+    --rule: oklch(30% 0.022 255);
+    --shadow: oklch(10% 0.015 255 / 0.35);
+  }
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 112.5%; /* 18px base */
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 0;
+}
+
+/* Fade-in sutil no carregamento */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+article {
+  animation: fadeIn 0.5s var(--ease-out, cubic-bezier(0.25, 1, 0.5, 1)) both;
+}
+
+/* Skip link — acessibilidade */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--surface);
+  color: var(--accent);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border);
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Layout */
+.page {
+  max-width: var(--line-length);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .page {
+    padding: 2rem 1.5rem 3rem;
+  }
+}
+
+/* Tipografia — scale com contraste */
+h1, h2, h3, h4 {
+  font-family: var(--font-ui);
+  font-weight: 650;
+  line-height: 1.2;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+/* Linha decorativa sutil antes do título principal — evoca divisória editorial */
+h1::before {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2.5px;
+  background: var(--accent-soft);
+  border-radius: 2px;
+  margin-bottom: 0.6rem;
+}
+
+@media (min-width: 640px) {
+  h1::before {
+    width: 3rem;
+    height: 3px;
+  }
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2.4rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1.5px solid var(--rule);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+/* Metadados da matéria */
+.meta {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.meta em {
+  font-style: normal;
+  display: block;
+}
+
+/* Links — editorial: cor de acento sem sublinhado, revela no hover/focus */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease, background 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.25em;
+  text-decoration-color: var(--accent-soft);
+}
+
+a:focus-visible {
+  outline: 2.5px solid var(--accent-soft);
+  outline-offset: 0.15em;
+  border-radius: 0.15em;
+}
+
+/* Links no cabeçalho de meta (hanzi) — pill sutil */
+.meta a {
+  display: inline-block;
+  padding: 0.1em 0.35em;
+  border-radius: 0.3em;
+  background: transparent;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.meta a:hover {
+  background: var(--surface);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.meta a:active {
+  transform: translateY(0);
+}
+
+/* Caracteres chineses inline (code e strong) */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+  background: var(--surface);
+  padding: 0.15em 0.35em;
+  border-radius: 0.25rem;
+  color: var(--accent);
+}
+
+/* Hanzi — reforço tipográfico */
+:lang(zh), [lang="zh"] {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
+}
+
+/* Listas */
+ul, ol {
+  margin-bottom: 1.2rem;
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+  padding-left: 0.2rem;
+}
+
+/* Citações em bloco — borda sutil completa + fundo */
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-style: italic;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+blockquote:hover {
+  border-color: var(--accent-soft);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Separador temático */
+hr {
+  border: none;
+  height: 1.5px;
+  background: var(--rule);
+  margin: 2rem 0;
+}
+
+/* Tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-family: var(--font-ui);
+}
+
+th, td {
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Imagem */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  display: block;
+  margin: 1.5rem auto;
+}
+
+/* Navegação / header */
+.site-header {
+  font-family: var(--font-ui);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1.5px solid var(--rule);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-header a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.site-header span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Lista de artigos (index) — touch targets ≥ 44px */
+.article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-list li {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.article-list a {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  padding: 1.125rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s ease;
+  min-height: 44px;
+}
+
+.article-list a:hover {
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+.article-list .item-title {
+  font-family: var(--font-ui);
+  font-weight: 650;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+}
+
+.article-list .item-meta {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Rodapé */
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1.5px solid var(--rule);
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* TOC automática */
+.toc {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  background: var(--surface);
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+}
+
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.toc li {
+  margin: 0.35rem 0;
+}
+
+.toc a {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.toc a:hover {
+  color: var(--accent);
+}
+
+/* Seção de setup do Anki no index */
+.anki-setup {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.anki-setup h2 {
+  margin-top: 0;
+  border-bottom: none;
+  font-size: 1.2rem;
+}
+
+.anki-setup p {
+  margin-bottom: 0.75rem;
+}
+
+.anki-setup p:last-child {
+  margin-bottom: 0;
+}
+
+.anki-setup .download-link {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: var(--radius);
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.anki-setup .download-link:hover {
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
+.anki-setup .hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* Aviso de CSV ausente */
+.csv-warning {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--surface);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-top: 1rem;
+}
+</style>
+</head>
+<body>
+<a href="#conteudo" class="skip-link">Pular para conteúdo</a>
+<div class="page">
+<nav class="site-header"><a href="../index.html">← Índice</a><span>Matéria #004</span></nav>
+<main id="conteudo">
+<article>
+<h1>A cor que recusa definição</h1>
+<p class="meta"><em>Matéria #004 — tipo: família fonética
+3 caracteres do dia: <a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a> (qīng), <a href="https://youglish.com/pronounce/清/chinese"><span lang="zh">清</span></a> (qīng), <a href="https://youglish.com/pronounce/情/chinese"><span lang="zh">情</span></a> (qíng)</em></p>
+<p>Em 1969, dois linguistas de Berkeley, Brent Berlin e Paul Kay, publicaram um livro que reorganizou o estudo das cores. A tese central: todas as línguas do mundo desenvolvem termos para cores numa ordem fixa. Primeiro claro/escuro. Depois vermelho. Depois verde e amarelo, nessa ordem ou na inversa. Depois azul. Depois marrom. Só então rosa, laranja, roxo, cinza.</p>
+<p>O chinês antigo quebra a fila.</p>
+<p>Não porque falte azul — pelo contrário. O caractere <a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a> (qīng) cobre azul, verde, a cor do céu, a cor da grama, a cor das montanhas distantes, a cor da juventude e, em certas épocas e contextos, o preto. Um único caractere atravessa três estágios da hierarquia de Berlin e Kay sem pedir licença. Não é que o chinês "confunda" azul com verde — é que ele resolveu o problema de outro jeito, unificando o que outras línguas separam.</p>
+<p>O que torna <a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a> fascinante não é só essa elasticidade cromática. É que ele é também um dos componentes fonéticos mais produtivos do mandarim. A sílaba <strong>qing</strong> — tom 1 ou 2 — carrega consigo água, coração, sol, palavra, pureza. Cada caractere novo pendura um radical diferente no mesmo som e ganha significado próprio, como quem troca a lente de uma câmera.</p>
+<p>Hoje, o componente-origem e duas de suas crias mais frequentes.</p>
+<h2 id="os-caracteres-do-dia">Os caracteres do dia</h2>
+<h3 id="qing-azul-verde-juventude"><a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a> (qīng) — azul, verde, juventude</h3>
+<p>A estrutura de <a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a> não é imediatamente óbvia para o olho moderno. O Shuowen Jiezi (<span lang="zh">说文解字</span>), o dicionário etimológico de 100 d.C., decompõe assim: a parte de cima é <a href="https://youglish.com/pronounce/生/chinese"><span lang="zh">生</span></a> (shēng — nascer, crescer, vida) e a parte de baixo é <a href="https://youglish.com/pronounce/丹/chinese"><span lang="zh">丹</span></a> (dān — cinábrio, um mineral vermelho usado em pigmentos e alquimia taoista). Juntos, produzem o que Xu Shen definiu como "a cor do leste" (<span lang="zh">东方色也</span>). A etimologia real dos ossos oraculares ainda é debatida — o pictograma original pode ter sido outra coisa —, mas a análise estrutural moderna mantém os dois componentes.</p>
+<p>Na cosmologia dos cinco elementos (<span lang="zh">五行</span>, wǔxíng), cada ponto cardeal tem uma cor: norte é preto, sul é vermelho, oeste é branco, centro é amarelo, leste é azul-esverdeado. Leste é onde o sol nasce, onde a primavera começa — e <a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a> é a cor da primavera. Daí <a href="https://youglish.com/pronounce/青春/chinese"><span lang="zh">青春</span></a> (qīngchūn — "primavera azul", juventude) e <a href="https://youglish.com/pronounce/青年/chinese"><span lang="zh">青年</span></a> (qīngnián — pessoa jovem, "ano azul"). O chinês pensa a juventude como uma cor.</p>
+<p>O tom é o primeiro (ˉ), alto e sustentado: qīng. Segure o ar no topo da garganta e mantenha.</p>
+<p>Como componente fonético, <a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a> aparece em dezenas de caracteres, quase sempre emprestando a pronúncia qing — com variação mínima de tom (qīng, qíng, qǐng, qìng). Ele não contribui com significado; é puro som. Quem dá o significado é o radical que o acompanha.</p>
+<p>Palavras comuns:
+- <a href="https://youglish.com/pronounce/青春/chinese"><span lang="zh">青春</span></a> (qīngchūn) — juventude, literalmente "primavera azul"
+- <a href="https://youglish.com/pronounce/青山/chinese"><span lang="zh">青山</span></a> (qīngshān) — montanhas verdes, as "montanhas azuis" da paisagem clássica</p>
+<h3 id="qing-claro-puro-limpido"><a href="https://youglish.com/pronounce/清/chinese"><span lang="zh">清</span></a> (qīng) — claro, puro, límpido</h3>
+<p>Pegue o componente fonético <a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a> e pendure à esquerda três gotas d'água: <span lang="zh">氵</span>, a forma comprimida do radical <a href="https://youglish.com/pronounce/水/chinese"><span lang="zh">水</span></a> (shuǐ — água, que vimos na matéria #003). O resultado é <a href="https://youglish.com/pronounce/清/chinese"><span lang="zh">清</span></a>: água + qing = água clara.</p>
+<p>Literalmente, <a href="https://youglish.com/pronounce/清/chinese"><span lang="zh">清</span></a> descreve água transparente — um rio onde se vê o fundo. Metaforicamente, é o conceito de clareza e pureza que atravessa toda a filosofia chinesa. O taoismo fala de <a href="https://youglish.com/pronounce/清净/chinese"><span lang="zh">清净</span></a> (qīngjìng — "claro e quieto"), o estado de quietude mental onde a mente, como água parada, reflete o mundo sem distorção. O budismo chan (precursor do zen) usa <a href="https://youglish.com/pronounce/清静/chinese"><span lang="zh">清静</span></a> (qīngjìng — mesma pronúncia, caractere de quietude diferente) para a tranquilidade que antecede a iluminação.</p>
+<p>No cotidiano, <a href="https://youglish.com/pronounce/清楚/chinese"><span lang="zh">清楚</span></a> (qīngchǔ — claro, evidente) é uma das primeiras palavras que um estudante de mandarim aprende. <a href="https://youglish.com/pronounce/清明节/chinese"><span lang="zh">清明节</span></a> (Qīngmíng Jié) é o Festival Qingming — "clareza e brilho" — quando os chineses visitam túmulos dos ancestrais no início de abril.</p>
+<p>O tom é primeiro (ˉ), idêntico ao de <a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a>. O que distingue os dois é o radical: <a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a> é uma cor, <a href="https://youglish.com/pronounce/清/chinese"><span lang="zh">清</span></a> é água pura. A diferença entre abstração e concretude cabe em três pingos.</p>
+<p>Palavras comuns:
+- <a href="https://youglish.com/pronounce/清楚/chinese"><span lang="zh">清楚</span></a> (qīngchǔ) — claro, evidente, "entendi claramente"
+- <a href="https://youglish.com/pronounce/清水/chinese"><span lang="zh">清水</span></a> (qīngshuǐ) — água limpa, água pura</p>
+<h3 id="qing-sentimento-emocao-afeto"><a href="https://youglish.com/pronounce/情/chinese"><span lang="zh">情</span></a> (qíng) — sentimento, emoção, afeto</h3>
+<p>Troque a água pelo coração. <span lang="zh">忄</span> é a forma comprimida de <a href="https://youglish.com/pronounce/心/chinese"><span lang="zh">心</span></a> (xīn — coração), que à esquerda de um caractere se contrai em três traços verticais. Pendure-o ao lado de <a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a>: coração + qing = sentimento.</p>
+<p><a href="https://youglish.com/pronounce/情/chinese"><span lang="zh">情</span></a> (qíng) é um dos caracteres mais carregados de vida interior do chinês. Não é qualquer sentimento — é o afeto que vincula pessoas e experiências. <a href="https://youglish.com/pronounce/感情/chinese"><span lang="zh">感情</span></a> (gǎnqíng) é o vínculo emocional. <a href="https://youglish.com/pronounce/爱情/chinese"><span lang="zh">爱情</span></a> (àiqíng) é o amor romântico. <a href="https://youglish.com/pronounce/心情/chinese"><span lang="zh">心情</span></a> (xīnqíng — literalmente "sentimento do coração") é o humor, o estado de espírito. <a href="https://youglish.com/pronounce/事情/chinese"><span lang="zh">事情</span></a> (shìqíng) é "assunto", a palavra genérica para "o que está acontecendo" — como se todo evento fosse também um estado afetivo.</p>
+<p>Aqui o tom sobe: segundo tom (ˊ), que começa no meio da garganta e ascende — qíng. A diferença de tom é a única coisa que separa "água clara" (<a href="https://youglish.com/pronounce/清/chinese"><span lang="zh">清</span></a> qīng) de "sentimento" (<a href="https://youglish.com/pronounce/情/chinese"><span lang="zh">情</span></a> qíng) de "pedir" (<a href="https://youglish.com/pronounce/请/chinese"><span lang="zh">请</span></a> qǐng, que merecerá matéria própria). Em chinês, o coração está a um tom de distância da clareza.</p>
+<p>Palavras comuns:
+- <a href="https://youglish.com/pronounce/心情/chinese"><span lang="zh">心情</span></a> (xīnqíng) — humor, estado de espírito
+- <a href="https://youglish.com/pronounce/感情/chinese"><span lang="zh">感情</span></a> (gǎnqíng) — sentimento, emoção, vínculo afetivo</p>
+<h2 id="a-clareza-do-coracao">A clareza do coração</h2>
+<p>A família qing revela algo sobre como o chinês organiza o mundo. Não é apenas truque ortográfico — é um princípio de economia cognitiva. Um som, várias ideias, cada uma ancorada por um radical visual. Para o aprendiz, é um atalho brutal: decore o som <strong>qing</strong> e o formato <a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a>, e você já tem um pé dentro de uma dúzia de palavras, desde que reconheça o radical que modifica o significado. <a href="https://youglish.com/pronounce/氵/chinese"><span lang="zh">氵</span></a> à esquerda? Água, clareza. <a href="https://youglish.com/pronounce/忄/chinese"><span lang="zh">忄</span></a> à esquerda? Coração, sentimento. <a href="https://youglish.com/pronounce/讠/chinese"><span lang="zh">讠</span></a> à esquerda? Palavra, pedido. <a href="https://youglish.com/pronounce/日/chinese"><span lang="zh">日</span></a> à esquerda? Sol, dia claro.</p>
+<p>Mas há outra camada. Olhe os três caracteres juntos — <a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a>, <a href="https://youglish.com/pronounce/清/chinese"><span lang="zh">清</span></a>, <a href="https://youglish.com/pronounce/情/chinese"><span lang="zh">情</span></a> — e você vê uma mini-topologia do pensamento chinês. A cor da primavera (<a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a>) se dissolve em água pura (<a href="https://youglish.com/pronounce/清/chinese"><span lang="zh">清</span></a>) e precipita em sentimento (<a href="https://youglish.com/pronounce/情/chinese"><span lang="zh">情</span></a>). Há uma continuidade entre natureza e emoção que a língua registra na grafia.</p>
+<p>O confucionismo tem um debate clássico que gira justamente em torno de <a href="https://youglish.com/pronounce/情/chinese"><span lang="zh">情</span></a>. Para Mencius (<span lang="zh">孟子</span>, Mèngzǐ, séc. IV a.C.), os sentimentos humanos nascem bons — brotam espontaneamente como a grama na primavera. Para Xunzi (<span lang="zh">荀子</span>, Xúnzǐ, séc. III a.C.), os sentimentos precisam ser cultivados, podados, como se limpam impurezas da água. De um lado, <a href="https://youglish.com/pronounce/情/chinese"><span lang="zh">情</span></a> é natural e basta. Do outro, <a href="https://youglish.com/pronounce/情/chinese"><span lang="zh">情</span></a> demanda <a href="https://youglish.com/pronounce/清/chinese"><span lang="zh">清</span></a> — clareza, purificação. Os dois caracteres, que na fala se encostam a um tom de distância, na filosofia duelam há 2.400 anos.</p>
+<p>O taoismo clássico usa a água límpida (<a href="https://youglish.com/pronounce/清/chinese"><span lang="zh">清</span></a>) como metáfora recorrente. O Daodejing (<span lang="zh">道德经</span>) compara o coração aquietado a água que, por ser clara e quieta, vira espelho. O coração humano, quando aquietado — um <a href="https://youglish.com/pronounce/情/chinese"><span lang="zh">情</span></a> temperado com <a href="https://youglish.com/pronounce/清/chinese"><span lang="zh">清</span></a> — reflete o mundo sem distorção.</p>
+<h2 id="deriva-o-menino-que-pintou-mil-li-de-azul-e-verde">Deriva: O menino que pintou mil li de azul e verde</h2>
+<p>No século XII, o imperador Song Huizong (<span lang="zh">宋徽宗</span>, Sòng Huīzōng) mantinha uma academia imperial de pintura. Um de seus alunos, Wang Ximeng (<span lang="zh">王希孟</span>, Wáng Xīmèng), com 18 anos de idade, recebeu a encomenda de pintar uma paisagem. Entregou <a href="https://youglish.com/pronounce/千里江山图/chinese"><span lang="zh">千里江山图</span></a> (Qiān Lǐ Jiāng Shān Tú), "Mil Li de Rios e Montanhas" — um rolo horizontal de quase 12 metros, uma das obras-primas da pintura chinesa.</p>
+<p>A pintura pertence ao gênero <a href="https://youglish.com/pronounce/青绿山水/chinese"><span lang="zh">青绿山水</span></a> (qīnglǜ shānshuǐ — "paisagem azul-e-verde"), uma vertente da <a href="https://youglish.com/pronounce/山水画/chinese"><span lang="zh">山水画</span></a> (shānshuǐhuà, a pintura de paisagem que visitamos na matéria #003). Enquanto a <a href="https://youglish.com/pronounce/山水画/chinese"><span lang="zh">山水画</span></a> clássica dos letrados preferia tinta monocromática (<span lang="zh">水墨</span>, shuǐmò), o estilo <a href="https://youglish.com/pronounce/青绿/chinese"><span lang="zh">青绿</span></a> apostava na cor vibrante. Os pigmentos vinham de minerais moídos: azurita para o azul (<a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a>) e malaquita para o verde (<span lang="zh">绿</span>). Misturados com cola animal, os pigmentos eram aplicados em camadas — semanas de secagem entre cada uma. O azul e o verde dominam a composição: montanhas ondulantes, rios escuros, pontes, vilarejos. Milhares de figuras humanas do tamanho de um grão de arroz se espalham pelo rolo.</p>
+<p>Wang morreu pouco depois — tinha menos de 25 anos. Não deixou outra obra conhecida. Mil Li de Rios e Montanhas é uma pintura de juventude (<a href="https://youglish.com/pronounce/青春/chinese"><span lang="zh">青春</span></a>, qīngchūn) feita com a cor da juventude (<a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a>). Um garoto de 18 anos que transformou minerais azuis em eternidade.</p>
+<p>Dentro do rolo, o imperador Qianlong, cinco séculos depois, escreveu um colofão — um comentário caligrafado sobre a pintura — chamando-a de "a paisagem mais azul já pintada". O rolo sobreviveu a dinastias, guerras e revoluções. Em 2017, o Museu do Palácio em Pequim o exibiu pela primeira vez em décadas. Houve filas de doze horas para cinco minutos de contemplação.</p>
+<hr />
+<p>A matéria #003 terminou com a promessa de olharmos para o chão. Em vez disso, olhamos para uma cor. A promessa não está quebrada — só desviada. Voltamos ao chão na próxima.</p>
+<h2 id="para-o-anki">Para o Anki</h2>
+<p>Cards desta matéria (7 cards):</p>
+<ul>
+<li><a href="https://youglish.com/pronounce/青/chinese"><span lang="zh">青</span></a> (qīng) — character</li>
+<li><a href="https://youglish.com/pronounce/清/chinese"><span lang="zh">清</span></a> (qīng) — character</li>
+<li><a href="https://youglish.com/pronounce/情/chinese"><span lang="zh">情</span></a> (qíng) — character</li>
+<li><a href="https://youglish.com/pronounce/青春/chinese"><span lang="zh">青春</span></a> (qīngchūn) — word</li>
+<li><a href="https://youglish.com/pronounce/清楚/chinese"><span lang="zh">清楚</span></a> (qīngchǔ) — word</li>
+<li><a href="https://youglish.com/pronounce/心情/chinese"><span lang="zh">心情</span></a> (xīnqíng) — word</li>
+<li><a href="https://youglish.com/pronounce/感情/chinese"><span lang="zh">感情</span></a> (gǎnqíng) — word</li>
+</ul>
+<p><a href="../cards/004-a-cor-que-recusa-definicao.csv">Baixar cards da matéria #004 (CSV)</a></p>
+<blockquote>
+<p>Instale o note type com o <a href="../hanzi-reader-template.apkg">template</a> antes de importar o CSV no Anki (File → Import).</p>
+</blockquote></article>
+</main>
+<footer class="site-footer">Gerado para leitura offline</footer>
+</div>
+</body>
+</html>

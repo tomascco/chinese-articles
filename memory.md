@@ -23,3 +23,11 @@
 - **Tema da deriva:** A pintura de paisagem chinesa 山水画 — tradição de pensamento visual, as três distâncias de Guo Xi, e a diferença fundamental com a paisagem ocidental
 - **Componentes/radicais introduzidos:** 山 (Kangxi 37), 水 / 氵 (Kangxi 85), 火 / 灬 (Kangxi 86)
 - **Palavras mencionadas:** 山水, 火山, 上山, 水果, 喝水, 火车, 大火, 山水画
+
+## Matéria #004
+- **Tipo:** a (família fonética)
+- **Caracteres cobertos:** 青 (qīng), 清 (qīng), 情 (qíng)
+- **Tema cultural principal:** A cor 青 como conceito espectral azul-verde e a produtividade do componente fonético qing — clareza (清), sentimento (情), juventude (青春)
+- **Tema da deriva:** A pintura 青绿山水 e Wang Ximeng — o garoto de 18 anos que pintou 千里江山图 com pigmentos de azurita e malaquita na dinastia Song
+- **Componentes/radicais introduzidos:** 青 (Kangxi 174), 忄 (variante de 心), 丹 (dān), 生 (shēng)
+- **Palavras mencionadas:** 青春, 青年, 青山, 清楚, 清水, 清净, 清静, 清明节, 心情, 感情, 爱情, 事情, 青绿, 青绿山水
